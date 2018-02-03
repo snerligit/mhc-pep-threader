@@ -125,6 +125,6 @@ class THREAD:
 
             ia = INTERFACE(relaxed_pose)
             ia.analyze()
-            print("Centoid dG: ", ia.get_dG())
+            print("Interface energy: ", ia.get_dG())
 
             relaxed_pose.assign(self.threaded)
