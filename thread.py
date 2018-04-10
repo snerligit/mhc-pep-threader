@@ -77,9 +77,9 @@ class THREAD:
         self.alignment.align()
 
         # template_seq = query_sequence , target_seq =  target_sequence
-        grishin = GRISHIN(self.template.get_template_path()+self.target_file_name, self.template.get_name(),
-                self.target.get_header(), self.alignment.get_aligned_query(),
-                self.alignment.get_aligned_target())
+        grishin = GRISHIN(self.template.get_template_path()+self.target_file_name,
+                self.target.get_header(), self.template.get_name(),
+                self.alignment.get_aligned_target(), self.alignment.get_aligned_query())
         grishin.write()
 
         self.grishin_file_name = grishin.get_file_name()

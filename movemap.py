@@ -77,6 +77,7 @@ class MOVEMAP:
                             residue_number = int(str(protein_res).split()[3].split("=")[1])
                             if residue_number not in self.movemap_res_list:
                                 self.movemap_res_list.append(residue_number)
+            self.movemap_res_list.append(int(str(pep_res).split()[3].split("=")[1]))
 
     def extract_peptide_protein_residues(self):
         residue_number = 1
