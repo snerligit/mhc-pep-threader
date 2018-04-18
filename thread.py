@@ -27,7 +27,7 @@ from movemap import MOVEMAP
 from job_distributor import JOB_DISTRIBUTOR
 from chain_split import CHAIN_SPLIT
 from interface_analyzer import INTERFACE
-from silent import SILENT
+from job_distributor import JOB_DISTRIBUTOR
 
 # import other required libraries
 import os
@@ -37,94 +37,106 @@ import sys
 class THREAD:
 
     target = None
-    target_file_name = "default"
     template = None
     alignment = None
     grishin_file_name = None
-    threaded = None
-    template_pdb = None
     fasta = ""
-    pep_start_index = 1
-    groove_distance = 3.5
     nstruct = 1
-    movemap = None
+    peptide = ""
+    pep_header = ""
+    mhc_headers = []
+    pep_start_index = 181
+    groove_distance = 3.5
 
-    def __init__(self, template_pdb, fasta, pep_start_index, groove_distance, nstruct, movemap, target_file_name):
+    def __init__(self, template, fasta, nstruct, pep_header, peptide):
 
-        self.template_pdb = template_pdb
+        self.template = template
         self.fasta = fasta
-        self.pep_start_index = pep_start_index
-        self.groove_distance = groove_distance
         self.nstruct = nstruct
-        self.movemap = movemap
-        self.target_file_name = target_file_name
+        self.peptide = peptide
+        self.pep_header = pep_header
+        self.pep_start_index = 181
+        self.groove_distance = 3.5
 
     def apply(self):
 
-        self.template = TEMPLATE(self.template_pdb)
-        self.template.treat_template_structure()
         self.align_template_target_sequences()
         self.do_homology_modeling()
-        self.treatment_post_homology_modeling()
 
-    def align_template_target_sequences(self):
+    def get_target_file_name(self, header="HLAs"):
+
+            return header+"_on_"+self.template.get_stripped_name()+"_with_"+self.pep_header
+
+    def get_pep_start_index(self, sequence):
+
+        index = 0
+        print (sequence)
+        print (self.peptide)
+        try:
+            index = sequence.rindex(self.peptide)
+            return index
+        except ValueError:
+            print("Retry with different alignment scheme")
+            exit(1)
+
+    def align_template_target_sequences(self, clustal=True):
 
         self.target = FASTA(self.fasta)
-        self.target.read()
-        self.set_target_file_name()
 
-        self.alignment = ALIGN(self.template.get_seq(), self.target.get_seq())
-        self.alignment.align()
+        if clustal == False:
+            self.target.read()
+            target_seqs = self.target.get_sequences()
 
-        # template_seq = query_sequence , target_seq =  target_sequence
-        grishin = GRISHIN(self.template.get_template_path()+self.target_file_name,
-                self.target.get_header(), self.template.get_name(),
-                self.alignment.get_aligned_target(), self.alignment.get_aligned_query())
-        grishin.write()
+            for key,value in target_seqs.items():
 
-        self.grishin_file_name = grishin.get_file_name()
+                self.alignment = ALIGN(self.template.get_sequence(), self.target.get_sequence(key))
+                self.alignment.align()
 
-    def set_target_file_name(self):
+                # template_seq = query_sequence , target_seq =  target_sequence
+                grishin = GRISHIN(self.get_target_file_name(), key, self.template.get_name(),
+                        self.alignment.get_aligned_target(), self.alignment.get_aligned_query())
 
-        if self.target_file_name == None:
-            self.target_file_name = self.target.get_header()+"_on_"+self.template.get_stripped_name()
+                self.mhc_headers.append(key)
+                self.grishin_file_name = grishin.get_file_name()
+                grishin.write()
+        else:
+            self.alignment = ALIGN(self.template.get_sequence(), None, self.fasta)
+            self.alignment.clustal()
+            alignment = FASTA(self.alignment.get_clustal_output_filename())
+            alignment.read()
+            aln_seqs = alignment.get_sequences()
+
+            for key,value in aln_seqs.items():
+                if key != 'template':
+                    grishin = GRISHIN(self.get_target_file_name(), key, self.template.get_name(),
+                             value, aln_seqs['template'])
+
+                    self.mhc_headers.append(key)
+                    self.grishin_file_name = grishin.get_file_name()
+                    grishin.write()
 
     def do_homology_modeling(self):
 
+        #jd = JOB_DISTRIBUTOR(self.get_target_file_name())
+        #jd.set_native(self.template.get_pose())
+        #silent_file = SILENT()
         alignment_vec = read_aln("grishin", self.grishin_file_name)
-        new_pose = pose_from_sequence(self.target.get_seq(), "fa_standard")
+        ctr = 0
         for vec in alignment_vec:
             print(vec)
+            new_pose = pose_from_sequence(self.target.get_sequence(self.mhc_headers[ctr]), "fa_standard")
             thread = PartialThreadingMover(vec, self.template.get_pose())
             thread.apply(new_pose)
 
-        chain = CHAIN_SPLIT(new_pose, self.pep_start_index)
-        chain.cut()
-        self.threaded = chain.get_pose()
-
-    def treatment_post_homology_modeling(self):
-
-        threaded_pdb_name = self.template.get_template_path()+self.target_file_name+".pdb"
-        self.threaded.dump_pdb(threaded_pdb_name)
-
-        if self.movemap == None:
-            movemap = MOVEMAP(threaded_pdb_name, self.pep_start_index, self.groove_distance, self.target_file_name+".movemap")
-        else:
-            movemap = MOVEMAP(threaded_pdb_name, self.pep_start_index, self.groove_distance, self.movemap, True)
-        movemap_rosetta_obj = movemap.get_movemap()
-
-        job_dist = JOB_DISTRIBUTOR(self.target_file_name, self.nstruct)
-
-        relaxed_pose = self.threaded
-        job_dist.get_dist_obj().native_pose = self.template.get_pose()
-
-        while not job_dist.get_dist_obj().job_complete:
-            relaxed_threaded_pose = RELAX(relaxed_pose)
-            relaxed_threaded_pose.relax_pdb_with_movemap(movemap_rosetta_obj)
-            job_dist.get_dist_obj().output_decoy(relaxed_pose)
-
-            ia = INTERFACE(relaxed_pose)
-            ia.analyze()
-            print("Interface energy: ", ia.get_dG())
-
-            relaxed_pose.assign(self.threaded)
+            #chain = CHAIN_SPLIT(new_pose, self.get_pep_start_index(new_pose.sequence()))
+            #print (self.get_pep_start_index(new_pose.sequence()))
+            #chain.cut()
+            #threaded = chain.get_pose()
+            threaded = new_pose
+            tag = self.get_target_file_name(self.mhc_headers[ctr])
+            #jd.get_dist_obj.output_decoy(threaded)
+            threaded.dump_pdb(tag+".pdb")
+            movemap = MOVEMAP(tag+".pdb", self.pep_start_index, self.groove_distance, tag+".movemap", True)
+            movemap.apply()
+            #silent_file.add(threaded,tag,"hla_output.out")
+            ctr += 1

@@ -48,6 +48,9 @@ class MOVEMAP:
         self.already_computed = already_computed
 
     def apply(self):
+        self.protein_residues = []
+        self.peptide_residues = []
+        self.movemap_res_list = []
         self.extract_peptide_protein_residues()
         self.create_pep_protein_list()
         self.write_movemap()
@@ -62,6 +65,7 @@ class MOVEMAP:
     def write_movemap(self):
         movemap_handler = open(self.filename, "w")
         movemap_handler.write("RESIDUE * NO\n")
+        #print(len(self.movemap_res_list))
         for residue in self.movemap_res_list:
             movemap_handler.write("RESIDUE "+str(residue)+" BBCHI\n")
         movemap_handler.write("JUMP * YES\n")

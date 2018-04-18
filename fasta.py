@@ -12,36 +12,30 @@
 import os
 import sys
 import subprocess
+from collections import defaultdict
 
 class FASTA:
 
     filename = ""
-    header = ""
-    seq = ""
+    sequences = defaultdict(dict)
 
-    def __init__(self, filename, header="", seq=""):
+    def __init__(self, filename):
         self.filename = filename
-        self.header = header
-        self.seq = seq
 
-    def get_header(self):
-        return self.header
+    def get_headers(self):
+        return self.sequences.keys()
 
-    def get_seq(self):
-        return self.seq
+    def get_sequences(self):
+        return self.sequences
+
+    def get_sequence(self, header):
+        return self.sequences[header]
 
     def read(self):
         fastaFileHandler = open(self.filename, "r")
         for line in fastaFileHandler:
             line = line.rstrip()
             if ">" in line:
-                self.header = "".join(list(line)[1:])
+                header = "".join(list(line)[1:])
             else:
-                self.seq += line
-
-    def write(self):
-        writefile = open(self.filename, "w")
-        writefile.write(">"+self.header)
-        writefile.write("\n")
-        writefile.write(self.seq)
-        writefile.close()
+                self.sequences[header] = line
