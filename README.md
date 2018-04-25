@@ -10,9 +10,9 @@ This protocol requires the following libraries
 
     * scikit-bio
 
-Command to run this protocol for the example input
+Command to run this protocol for the example input from within the example folder
 ```
-python3 main.py -template_pdb example/template_01.pdb -fasta example/target.fasta -pep_start_index 180 -nstruct 1
+python3 ../main.py -template_pdb 3mrm.pdb -peptide pep_list -mhcs mhc_list -mhc_chain A -peptide_chain P
 ```
 
 If you use this work, please cite:

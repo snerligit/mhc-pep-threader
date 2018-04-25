@@ -79,7 +79,7 @@ class MODEL_HLA:
             for line in hla_file_handler:
                 line = line.rstrip()
                 if line.lower() == "all":
-                    for key, value in hla_sequences:
+                    for key, value in hla_sequences.items():
                         fasta_file_handler.write(">"+key+"\n")
                         fasta_file_handler.write(value+self.beta2m+self.peptide+"\n")
                 else:
