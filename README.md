@@ -10,6 +10,8 @@ This protocol requires the following libraries
 
     * scikit-bio
 
+    * clusta omega (command line interface)
+
 Command to run this protocol for the example input from within the example folder
 ```
 python3 ../main.py -template_pdb 3mrm.pdb -peptide pep_list -mhcs mhc_list -mhc_chain A -peptide_chain P
