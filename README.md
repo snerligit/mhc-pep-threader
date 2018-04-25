@@ -10,7 +10,7 @@ This protocol requires the following libraries
 
     * scikit-bio
 
-    * clusta omega (command line interface)
+    * clustal omega (command line interface)
 
 Command to run this protocol for the example input from within the example folder
 ```
