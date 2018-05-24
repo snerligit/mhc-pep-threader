@@ -45,18 +45,23 @@ class THREAD:
     peptide = ""
     pep_header = ""
     mhc_headers = []
+    #pep_start_index = 181
+    #pep_start_index = 376
     pep_start_index = 181
     groove_distance = 3.5
+    pep_length = 0
 
-    def __init__(self, template, fasta, nstruct, pep_header, peptide):
+    def __init__(self, template, fasta, nstruct, pep_header, peptide, pep_start_index):
 
         self.template = template
         self.fasta = fasta
         self.nstruct = nstruct
         self.peptide = peptide
         self.pep_header = pep_header
-        self.pep_start_index = 181
+        #self.pep_start_index = 181
+        self.pep_start_index = pep_start_index
         self.groove_distance = 3.5
+        self.pep_length = len(list(peptide))
 
     def apply(self):
 
@@ -136,7 +141,7 @@ class THREAD:
             tag = self.get_target_file_name(self.mhc_headers[ctr])
             #jd.get_dist_obj.output_decoy(threaded)
             threaded.dump_pdb(tag+".pdb")
-            movemap = MOVEMAP(tag+".pdb", self.pep_start_index, self.groove_distance, tag+".movemap", True)
+            movemap = MOVEMAP(tag+".pdb", self.pep_start_index, self.pep_length, self.groove_distance, tag+".movemap", True)
             movemap.apply()
             #silent_file.add(threaded,tag,"hla_output.out")
             ctr += 1

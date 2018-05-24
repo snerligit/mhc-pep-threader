@@ -13,7 +13,8 @@ from pyrosetta import *
 #custom libraries
 from model_hla import MODEL_HLA
 from template import TEMPLATE
-from database.HLA_sequences_180 import hla_sequences
+from database.HLA_sequences_180 import hla_sequences_180
+from database.HLA_sequences_complex import hla_sequences
 
 # import other required libraries
 import os
@@ -21,7 +22,7 @@ import sys
 import subprocess
 import argparse
 
-def model_hla_for_each_peptide(template_pdb_, template_, fasta_, groove_distance_, nstruct_, movemap_, peptide_, mhcs_, beta2m):
+def model_hla_for_each_peptide(template_pdb_, template_, fasta_, groove_distance_, nstruct_, movemap_, peptide_, mhcs_, beta2m, pep_start_index, trim_mhc_):
 
     if beta2m == None:
         beta2m = ""
@@ -32,7 +33,7 @@ def model_hla_for_each_peptide(template_pdb_, template_, fasta_, groove_distance
             pep_header = line[1:]
         else:
             pep_seq = line
-            modeller = MODEL_HLA(template_pdb_, template_, fasta_, groove_distance_, nstruct_, movemap_, pep_header, pep_seq, mhcs_, beta2m)
+            modeller = MODEL_HLA(template_pdb_, template_, fasta_, groove_distance_, nstruct_, movemap_, pep_header, pep_seq, mhcs_, beta2m, pep_start_index, trim_mhc_)
             modeller.apply()
     pep_file_handler.close()
 
@@ -51,7 +52,9 @@ if __name__ == "__main__":
     parser.add_argument("-list_mhcs", help="List all the HLAs for which sequences are available in the database", action='store_true')
     parser.add_argument("-beta2m", help="provide beta2m sequence")
     parser.add_argument("-mhc_chain", help="provide mhc chain id in the template")
+    parser.add_argument("-trim_mhc", help="Should we trim the mhc molecule", action='store_true')
     parser.add_argument("-peptide_chain", help="provide peptide chain id in the template")
+    parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, default=181)
 
     args = parser.parse_args()
 
@@ -67,16 +70,22 @@ if __name__ == "__main__":
     beta2m_ = args.beta2m
     mhc_chain_ = args.mhc_chain
     peptide_chain_ = args.peptide_chain
+    trim_mhc_ = args.trim_mhc
+    pep_start_index_ = args.pep_start_index
 
     if list_mhcs_ == True:
-        for key,value in hla_sequences.items():
-            print(key)
+        if trim_mhc_:
+            for key,value in hla_sequences.items():
+                print(key)
+        else:
+            for key,value in hla_sequences.items():
+                print(key)
     else:
         if (fasta_ == None and mhcs_ == None) or template_pdb_ == None or peptide_ == None:
             print("Please provide mhc list, peptide list and template_pdb to perform threading\n Type -h to see all the options")
             exit(1)
         # Load Rosetta datbase files
-        init()
+        mpi_init()
         template_ = TEMPLATE(template_pdb_)
-        template_.treat_template_structure(mhc_chain_, peptide_chain_)
-        model_hla_for_each_peptide(template_pdb_, template_, fasta_, groove_distance_, nstruct_, movemap_, peptide_, mhcs_, beta2m_)
+        template_.treat_template_structure(mhc_chain_, peptide_chain_, trim_mhc_)
+        model_hla_for_each_peptide(template_pdb_, template_, fasta_, groove_distance_, nstruct_, movemap_, peptide_, mhcs_, beta2m_, pep_start_index_, trim_mhc_)

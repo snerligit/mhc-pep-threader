@@ -70,11 +70,12 @@ class TEMPLATE:
         template_pdb_name = self.get_name()
         self.template_pdb = template_pdb_name + ".cropped.pdb"
 
-    def treat_template_structure(self, mhc_chain, peptide_chain, idealize_relax = False):
+    def treat_template_structure(self, mhc_chain, peptide_chain, trim_mhc, idealize_relax = False):
 
         cleanATOM(self.template_pdb)
         self.append_clean_pdb()
-        self.trim_pdb(mhc_chain, peptide_chain)
+        if trim_mhc:
+            self.trim_pdb(mhc_chain, peptide_chain)
         self.template_pose = pose_from_pdb(self.template_pdb)
         if idealize_relax == True:
             self.template_pose = IDEALIZE().idealize_pdb(template_pose)

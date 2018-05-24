@@ -31,6 +31,7 @@ class MOVEMAP:
 
     structure = None
     pep_start_index = None
+    pep_len = 9
     groove_distance = 3.5
     filename = ""
     already_computed = False
@@ -39,13 +40,14 @@ class MOVEMAP:
     peptide_residues = []
     movemap_res_list = []
 
-    def __init__(self, pdb_file, pep_start_index, groove_distance, filename, already_computed=False):
+    def __init__(self, pdb_file, pep_start_index, pep_length, groove_distance, filename, already_computed=False):
         self.structure = MyPDB(pdb_file)
         self.structure.read_chain_A()
         self.pep_start_index = pep_start_index
         self.groove_distance = groove_distance
         self.filename = filename
         self.already_computed = already_computed
+        self.pep_len = pep_length
 
     def apply(self):
         self.protein_residues = []
@@ -85,8 +87,9 @@ class MOVEMAP:
 
     def extract_peptide_protein_residues(self):
         residue_number = 1
+        print (self.pep_start_index+self.pep_len)
         for residue in self.structure.get_pdb():
-            if residue_number >= self.pep_start_index:
+            if residue_number >= self.pep_start_index and residue_number < self.pep_start_index+self.pep_len:
                 self.peptide_residues.append(residue)
             else:
                 self.protein_residues.append(residue)
