@@ -52,7 +52,7 @@ if __name__ == "__main__":
     parser.add_argument("-list_mhcs", help="List all the HLAs for which sequences are available in the database", action='store_true')
     parser.add_argument("-beta2m", help="provide beta2m sequence")
     parser.add_argument("-mhc_chain", help="provide mhc chain id in the template")
-    parser.add_argument("-trim_mhc", help="Should we trim the mhc molecule", action='store_true')
+    parser.add_argument("-no_trim_mhc", help="Should we model the whole complex", action='store_false')
     parser.add_argument("-peptide_chain", help="provide peptide chain id in the template")
     parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, default=181)
 
@@ -70,7 +70,7 @@ if __name__ == "__main__":
     beta2m_ = args.beta2m
     mhc_chain_ = args.mhc_chain
     peptide_chain_ = args.peptide_chain
-    trim_mhc_ = args.trim_mhc
+    trim_mhc_ = args.no_trim_mhc
     pep_start_index_ = args.pep_start_index
 
     if list_mhcs_ == True:
