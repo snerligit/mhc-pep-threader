@@ -85,7 +85,7 @@ if __name__ == "__main__":
             print("Please provide mhc list, peptide list and template_pdb to perform threading\n Type -h to see all the options")
             exit(1)
         # Load Rosetta datbase files
-        mpi_init()
+        init()
         template_ = TEMPLATE(template_pdb_)
         template_.treat_template_structure(mhc_chain_, peptide_chain_, trim_mhc_)
         model_hla_for_each_peptide(template_pdb_, template_, fasta_, groove_distance_, nstruct_, movemap_, peptide_, mhcs_, beta2m_, pep_start_index_, trim_mhc_)
