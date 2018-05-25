@@ -31,8 +31,11 @@ class GRISHIN:
     def get_file_name(self):
         return self.filename+".grishin"
 
-    def write(self):
-        writefile = open(self.get_file_name(), "a")
+    def write(self, is_new = False):
+        if is_new:
+            writefile = open(self.get_file_name(), "w")
+        else:
+            writefile = open(self.get_file_name(), "a")
         writefile.write("## "+self.target_head+" "+self.template_head+"\n"+"#"+"\n")
         writefile.write("scores_from_program: 0\n")
         writefile.write("0 "+self.target_string+"\n")

@@ -17,11 +17,11 @@ from pyrosetta.rosetta.core.sequence import *
 # additional bio libraries
 
 #custom libraries
-from relax import RELAX
-from template import TEMPLATE
-from fasta import FASTA
-from grishin import GRISHIN
-from align import ALIGN
+from idealize_relax.relax import RELAX
+from thread.template import TEMPLATE
+from thread.fasta import FASTA
+from alignment.align import ALIGN
+from alignment.grishin import GRISHIN
 
 # import other required libraries
 import os
@@ -66,7 +66,7 @@ class PRE_THREADING:
             print("Retry with different alignment scheme")
             exit(1)
 
-    def create_grishin(self, key, aligned_target, aligned_query):
+    def create_grishin(self, key, aligned_target, aligned_query, is_new = False):
 
         # template_seq = query_sequence , target_seq =  target_sequence
         grishin = GRISHIN(self.get_target_file_name(), key, self.template.get_name(),

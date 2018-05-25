@@ -12,7 +12,7 @@ from pyrosetta import *
 
 #custom libraries
 from model_hla import MODEL_HLA
-from argparser import ARGPARSE
+from input_output.input.argparser import ARGPARSE
 from database.HLA_sequences_180 import hla_sequences_180
 from database.HLA_sequences_complex import hla_sequences
 

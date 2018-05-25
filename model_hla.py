@@ -15,18 +15,16 @@ from pyrosetta import *
 # additional bio libraries
 
 #custom libraries
-from relax import RELAX
-from template import TEMPLATE
-from fasta import FASTA
-from grishin import GRISHIN
-from align import ALIGN
-from movemap import MOVEMAP
-from job_distributor import JOB_DISTRIBUTOR
-from chain_split import CHAIN_SPLIT
-from interface_analyzer import INTERFACE
-from silent import SILENT
-from thread import THREAD
-from pre_thread import PRE_THREADING
+from idealize_relax.relax import RELAX
+from thread.template import TEMPLATE
+from thread.fasta import FASTA
+from idealize_relax.movemap import MOVEMAP
+from jd.job_distributor import JOB_DISTRIBUTOR
+from ia.chain_split import CHAIN_SPLIT
+from ia.interface_analyzer import INTERFACE
+from input_output.output.silent import SILENT
+from thread.thread import THREAD
+from thread.pre_thread import PRE_THREADING
 
 from database.HLA_sequences_180 import hla_sequences_180
 from database.HLA_sequences_complex import hla_sequences

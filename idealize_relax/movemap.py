@@ -24,7 +24,7 @@ from Bio.PDB import *
 from pyrosetta.rosetta.core.kinematics import MoveMap
 
 # custom libraries
-from custom_pdb import MyPDB
+from util.custom_pdb import MyPDB
 
 
 class MOVEMAP:

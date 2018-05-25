@@ -13,7 +13,7 @@ from skbio.alignment import StripedSmithWaterman
 from Bio.Align.Applications import ClustalOmegaCommandline
 
 #custom libraries
-from substitution_matrix import BLOSUM
+from alignment.substitution_matrix import BLOSUM
 
 # import other required libraries
 import os

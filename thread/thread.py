@@ -17,7 +17,7 @@ from pyrosetta.rosetta.core.sequence import *
 # additional bio libraries
 
 #custom libraries
-from movemap import MOVEMAP
+from idealize_relax.movemap import MOVEMAP
 
 # import other required libraries
 import os

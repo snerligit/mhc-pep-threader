@@ -15,8 +15,8 @@ from collections import defaultdict
 # additional bio libraries
 
 #custom libraries
-from chain_split import CHAIN_SPLIT
-from interface_analyzer import INTERFACE
+from ia.chain_split import CHAIN_SPLIT
+from ia.interface_analyzer import INTERFACE
 
 # import other required libraries
 import os

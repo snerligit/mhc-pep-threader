@@ -15,7 +15,7 @@ import argparse
 import subprocess
 
 # custom libraries
-from movemap import MOVEMAP
+from idealize_relax.movemap import MOVEMAP
 
 
 if __name__ == "__main__":
