@@ -72,9 +72,6 @@ class ALIGN:
         writefilehandle.close()
 
 
-    #def read_aln(self):
-
-
     def clustal(self):
         self.init_clustal_input()
         cline = ClustalOmegaCommandline(infile=self.clustal_input, outfile=self.clustal_output, distmat_full=True,
