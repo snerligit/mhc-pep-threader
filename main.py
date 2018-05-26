@@ -21,9 +21,7 @@ import os
 import sys
 import subprocess
 
-
-if __name__ == "__main__":
-
+def run():
     args = ARGPARSE()
 
     if args.is_list_mhcs() == True:
@@ -38,3 +36,7 @@ if __name__ == "__main__":
         init()
         modeller = MODEL_HLA(args)
         modeller.model_hlas_for_each_peptide()
+
+
+if __name__ == "__main__":
+    run()
