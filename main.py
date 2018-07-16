@@ -13,8 +13,10 @@ from pyrosetta import *
 #custom libraries
 from model_hla import MODEL_HLA
 from input_output.input.argparser import ARGPARSE
-from database.HLA_sequences_180 import hla_sequences_180
-from database.HLA_sequences_complex import hla_sequences
+#from database.HLA_sequences_180 import hla_sequences_180
+from database.HLA_sequences import hla_sequences
+# added b2m sequences - ACM
+from database.beta2m_sequences import beta2m_sequences
 
 # import other required libraries
 import os
@@ -29,6 +31,7 @@ def run():
             for key,value in hla_sequences.items():
                 print(key)
         else:
+            # changed to hla_sequences_180 - ACM
             for key,value in hla_sequences.items():
                 print(key)
     else:

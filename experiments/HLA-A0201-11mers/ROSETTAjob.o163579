@@ -1,0 +1,170 @@
+
+/usr/lib64/qt-3.3/bin:/opt/rh/python27/root/usr/bin:/usr/local/MGLTools-1.5.6/bin/bin:/usr/local/autodock_vina_1_1_2/bin:/usr/lib64/openmpi/bin:/opt/opengrid/ge2011.11/bin/linux-x64:/tmp/163579.1.all.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/gurobi751/linux64/bin:/home/snerli/rosetta/Rosetta_ref2015/main/source/bin
+/opt/rh/python27/root/usr/lib64:/opt/opengrid/ge2011.11/lib/linux-x64:/usr/lib:/usr/lib64:/usr/local/lib:/usr/lib64/openmpi/lib:/usr/local/gurobi751/linux64/lib
+/tmp/163579.1.all.q
+
+Executing on : baker10
+Number of hosts operating on : 1
+Number of queued slots in use for parallel job: 5
+
+Running on 5 cpus …
+/home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease
+-s 4mj5.clean.pdb -in:file:movemap 4mj5.clean.movemap -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent 4mj5.clean.pdb_decoys_relaxed.out
+-out:nstruct 1
+[0mcore.init: (3) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (3) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s 4mj5.clean.pdb -in:file:movemap 4mj5.clean.movemap -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent 4mj5.clean.pdb_decoys_relaxed.out -out:nstruct 1
+[0mcore.init: (4) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (4) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s 4mj5.clean.pdb -in:file:movemap 4mj5.clean.movemap -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent 4mj5.clean.pdb_decoys_relaxed.out -out:nstruct 1
+[0mcore.init: (0) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (0) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s 4mj5.clean.pdb -in:file:movemap 4mj5.clean.movemap -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent 4mj5.clean.pdb_decoys_relaxed.out -out:nstruct 1
+[0mcore.init: (1) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (1) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s 4mj5.clean.pdb -in:file:movemap 4mj5.clean.movemap -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent 4mj5.clean.pdb_decoys_relaxed.out -out:nstruct 1
+[0mcore.init: (2) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (2) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s 4mj5.clean.pdb -in:file:movemap 4mj5.clean.movemap -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent 4mj5.clean.pdb_decoys_relaxed.out -out:nstruct 1
+[0mcore.init: (2) [0m'RNG device' seed mode, using '/dev/urandom', seed=-145200856 seed_offset=0 real_seed=1363746890
+[0mcore.init.random: (2) [0mRandomGenerator:init: Normal mode, seed=1363746890 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (2) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (4) [0m'RNG device' seed mode, using '/dev/urandom', seed=-645819063 seed_offset=0 real_seed=1363746892
+[0mcore.init.random: (4) [0mRandomGenerator:init: Normal mode, seed=1363746892 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (4) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (0) [0m'RNG device' seed mode, using '/dev/urandom', seed=1363746888 seed_offset=0 real_seed=1363746888
+[0mcore.init.random: (0) [0mRandomGenerator:init: Normal mode, seed=1363746888 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (0) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (1) [0m'RNG device' seed mode, using '/dev/urandom', seed=-2087788811 seed_offset=0 real_seed=1363746889
+[0mcore.init.random: (1) [0mRandomGenerator:init: Normal mode, seed=1363746889 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (1) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (3) [0m'RNG device' seed mode, using '/dev/urandom', seed=-1637810228 seed_offset=0 real_seed=1363746891
+[0mcore.init.random: (3) [0mRandomGenerator:init: Normal mode, seed=1363746891 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (3) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.scoring.etable: (2) [0mStarting energy table calculation
+[0mcore.scoring.etable: (0) [0mStarting energy table calculation
+[0mcore.scoring.etable: (3) [0mStarting energy table calculation
+[0mcore.scoring.etable: (1) [0mStarting energy table calculation
+[0mcore.scoring.etable: (4) [0mStarting energy table calculation
+[0mcore.scoring.etable: (4) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (4) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (4) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (2) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (2) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (2) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (1) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (1) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (1) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (0) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (0) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (0) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (3) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (3) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (3) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (4) [0mFinished calculating energy tables.
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (3) [0mFinished calculating energy tables.
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (1) [0mFinished calculating energy tables.
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (2) [0mFinished calculating energy tables.
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mcore.scoring.etable: (0) [0mFinished calculating energy tables.
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.chemical.GlobalResidueTypeSet: (4) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (4) [0mTotal time to initialize 1.7 seconds.
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (1) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (1) [0mTotal time to initialize 1.71 seconds.
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (3) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (3) [0mTotal time to initialize 1.72 seconds.
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (2) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (2) [0mTotal time to initialize 1.79 seconds.
+[0mcore.chemical.GlobalResidueTypeSet: (0) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (0) [0mTotal time to initialize 1.8 seconds.
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (4) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0m[31m[1m
+ERROR: ERROR: could not open file 4mj5.clean.movemap
+ERROR:: Exit from: src/core/kinematics/MoveMap.cc line: 388
+[0m[35mBACKTRACE:
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libutility.so(utility::exit(char const*, int, std::string const&, int)+0x229) [0x2ae4b9ae5219]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libcore.2.so(core::kinematics::MoveMap::init_from_file(std::string const&)+0x2454) [0x2ae4b8829f84]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libprotocols.3.so(protocols::relax::RelaxProtocolBase::set_default_movemap()+0x321) [0x2ae4b395cd21]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libprotocols.3.so(protocols::relax::RelaxProtocolBase::set_defaults()+0x1e) [0x2ae4b395d2ee]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libprotocols.3.so(protocols::relax::RelaxProtocolBase::RelaxProtocolBase(std::string const&, std::shared_ptr<core::scoring::ScoreFunction>)+0xea) [0x2ae4b395d75a]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libprotocols.3.so(protocols::relax::FastRelax::FastRelax(std::shared_ptr<core::scoring::ScoreFunction>, unsigned long)+0x69) [0x2ae4b3935de9]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libprotocols.3.so(protocols::relax::generate_relax_from_cmd(utility::options::OptionCollection const&, bool)+0x943) [0x2ae4b3960533]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libprotocols.3.so(protocols::relax::generate_relax_from_cmd(bool)+0x14) [0x2ae4b3960744]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/build/src/release/linux/2.6/64/x86/gcc/4.8/mpi/libprotocols.3.so(protocols::relax::Relax_main(bool)+0x20) [0x2ae4b39594c0]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease() [0x408d9e]
+/lib64/libc.so.6(__libc_start_main+0xfd) [0x395321ed5d]
+/home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease() [0x408e91]
+[0mcaught exception 
+
+File: src/core/kinematics/MoveMap.cc:388
+[ ERROR ] UtilityExitException
+ERROR: ERROR: could not open file 4mj5.clean.movemap
+
+
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (3) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (1) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[63475,1],4]
+  Exit code:    255
+--------------------------------------------------------------------------

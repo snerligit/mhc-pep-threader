@@ -30,18 +30,20 @@ class ARGPARSE:
         parser.add_argument("-nstruct", help="number of times a threaded structure should be relaxed", type=int, default=1)
         parser.add_argument("-mhcs", help="provide the list of names of MHCs in the file, if you want to include all, just type \'all\' in the file")
         parser.add_argument("-list_mhcs", help="List all the HLAs for which sequences are available in the database", action='store_true')
-        parser.add_argument("-beta2m", help="provide beta2m sequence", default="")
+        parser.add_argument("-beta2m", help="provide beta2m sequence")
         parser.add_argument("-mhc_chain", help="provide mhc chain id in the template")
+        parser.add_argument("-beta2m_chain", help="provide beta2m chain id in the template")
         parser.add_argument("-no_trim_mhc", help="Should we model the whole complex", action='store_false')
         parser.add_argument("-peptide_chain", help="provide peptide chain id in the template")
-        parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, default=181)
+        parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, default=285)
+        parser.add_argument("-mhc_length", help="provide mhc length", type=int, default=285)
 
         self.args = parser.parse_args()
 
     def check_user_input(self):
         if self.is_list_mhcs() == False:
-            if (self.get_target_fasta() == None and self.get_mhcs() == None) or self.get_template_pdb() == None or self.get_peptides() == None:
-                print("Please provide mhc list, peptide list and template_pdb to perform threading\n Type -h to see all the options")
+            if (self.get_target_fasta() == None and self.get_mhcs() == None) or self.get_template_pdb() == None or self.get_peptides() == None or self.get_beta2m() == None:
+                print("Please provide mhc list, beta2m list, peptide list and template_pdb to perform threading\n Type -h to see all the options")
                 exit(1)
 
     def get_template_pdb(self):
@@ -59,6 +61,10 @@ class ARGPARSE:
     def get_mhcs(self):
 
         return self.args.mhcs
+    
+    def get_mhc_length(self):
+    
+        return self.args.mhc_length
 
     def get_peptides(self):
 
@@ -95,6 +101,10 @@ class ARGPARSE:
     def get_mhc_chain(self):
 
         return self.args.mhc_chain
+    
+    def get_beta2m_chain(self):
+        
+        return self.args.beta2m_chain
 
     def get_pep_start_index(self):
 

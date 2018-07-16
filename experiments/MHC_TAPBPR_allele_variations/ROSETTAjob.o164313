@@ -1,0 +1,1938 @@
+
+/usr/lib64/qt-3.3/bin:/opt/rh/python27/root/usr/bin:/usr/local/MGLTools-1.5.6/bin/bin:/usr/local/autodock_vina_1_1_2/bin:/usr/lib64/openmpi/bin:/opt/opengrid/ge2011.11/bin/linux-x64:/tmp/164313.1.all.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/gurobi751/linux64/bin:/home/snerli/rosetta/Rosetta_ref2015/main/source/bin
+/opt/rh/python27/root/usr/lib64:/opt/opengrid/ge2011.11/lib/linux-x64:/usr/lib:/usr/lib64:/usr/local/lib:/usr/lib64/openmpi/lib:/usr/local/gurobi751/linux64/lib
+/tmp/164313.1.all.q
+
+Executing on : baker11
+Number of hosts operating on : 2
+Number of queued slots in use for parallel job: 10
+
+Running on 10 cpus …
+/home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease
+-s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out
+-out:nstruct 10
+[0mcore.init: (4) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (4) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (5) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (5) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (2) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (2) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (3) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (3) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (0) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (0) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (9) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (9) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (8) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (8) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (7) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (7) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (1) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (1) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (4) [0m'RNG device' seed mode, using '/dev/urandom', seed=-505044584 seed_offset=0 real_seed=-851780173
+[0mcore.init.random: (4) [0mRandomGenerator:init: Normal mode, seed=-851780173 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (4) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (5) [0m'RNG device' seed mode, using '/dev/urandom', seed=-1838068550 seed_offset=0 real_seed=-851780172
+[0mcore.init.random: (5) [0mRandomGenerator:init: Normal mode, seed=-851780172 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (5) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (6) [0mRosetta version: rosetta.source.release-164 r164 2017.52+release.7984dbe 7984dbe8f2d8944cc7af321c625dd9f256ab1598 https://www.rosettacommons.org 2017-12-31T03:21:42.126261
+[0mcore.init: (6) [0mcommand: /home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease -s G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb_decoys_relaxed.out -out:nstruct 10
+[0mcore.init: (0) [0m'RNG device' seed mode, using '/dev/urandom', seed=-851780177 seed_offset=0 real_seed=-851780177
+[0mcore.init.random: (0) [0mRandomGenerator:init: Normal mode, seed=-851780177 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (0) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (8) [0m'RNG device' seed mode, using '/dev/urandom', seed=-561614155 seed_offset=0 real_seed=-851780169
+[0mcore.init.random: (8) [0mRandomGenerator:init: Normal mode, seed=-851780169 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (8) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (2) [0m'RNG device' seed mode, using '/dev/urandom', seed=1538266590 seed_offset=0 real_seed=-851780175
+[0mcore.init.random: (2) [0mRandomGenerator:init: Normal mode, seed=-851780175 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (2) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (1) [0m'RNG device' seed mode, using '/dev/urandom', seed=1924941930 seed_offset=0 real_seed=-851780176
+[0mcore.init.random: (1) [0mRandomGenerator:init: Normal mode, seed=-851780176 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (1) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (6) [0m'RNG device' seed mode, using '/dev/urandom', seed=-1260680222 seed_offset=0 real_seed=-851780171
+[0mcore.init.random: (6) [0mRandomGenerator:init: Normal mode, seed=-851780171 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (6) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (3) [0m'RNG device' seed mode, using '/dev/urandom', seed=571038135 seed_offset=0 real_seed=-851780174
+[0mcore.init.random: (3) [0mRandomGenerator:init: Normal mode, seed=-851780174 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (3) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.init: (9) [0m'RNG device' seed mode, using '/dev/urandom', seed=657178045 seed_offset=0 real_seed=-851780168
+[0mcore.init.random: (9) [0mRandomGenerator:init: Normal mode, seed=-851780168 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (9) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.scoring.etable: (4) [0mStarting energy table calculation
+[0mcore.scoring.etable: (5) [0mStarting energy table calculation
+[0mcore.scoring.etable: (4) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (4) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (4) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.init: (7) [0m'RNG device' seed mode, using '/dev/urandom', seed=763188506 seed_offset=0 real_seed=-851780170
+[0mcore.init.random: (7) [0mRandomGenerator:init: Normal mode, seed=-851780170 RG_type=mt19937
+[0mcore.scoring.ScoreFunctionFactory: (7) [0mSCOREFUNCTION: [32mref2015[0m
+[0mcore.scoring.etable: (5) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (5) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (5) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (2) [0mStarting energy table calculation
+[0mcore.scoring.etable: (8) [0mStarting energy table calculation
+[0mcore.scoring.etable: (3) [0mStarting energy table calculation
+[0mcore.scoring.etable: (6) [0mStarting energy table calculation
+[0mcore.scoring.etable: (9) [0mStarting energy table calculation
+[0mcore.scoring.etable: (0) [0mStarting energy table calculation
+[0mcore.scoring.etable: (1) [0mStarting energy table calculation
+[0mcore.scoring.etable: (8) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (8) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (8) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (7) [0mStarting energy table calculation
+[0mcore.scoring.etable: (2) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (2) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (2) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (3) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (3) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (3) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (9) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (9) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (9) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (6) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (6) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (6) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (0) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (0) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (0) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (1) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (1) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (1) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (7) [0msmooth_etable: changing atr/rep split to bottom of energy well
+[0mcore.scoring.etable: (7) [0msmooth_etable: spline smoothing lj etables (maxdis = 6)
+[0mcore.scoring.etable: (7) [0msmooth_etable: spline smoothing solvation etables (max_dis = 6)
+[0mcore.scoring.etable: (4) [0mFinished calculating energy tables.
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (5) [0mFinished calculating energy tables.
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.chemical.GlobalResidueTypeSet: (4) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (4) [0mTotal time to initialize 1.32 seconds.
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (5) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (5) [0mTotal time to initialize 1.36 seconds.
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.scoring.etable: (9) [0mFinished calculating energy tables.
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (8) [0mFinished calculating energy tables.
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (2) [0mFinished calculating energy tables.
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (3) [0mFinished calculating energy tables.
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (7) [0mFinished calculating energy tables.
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mcore.scoring.etable: (6) [0mFinished calculating energy tables.
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mcore.scoring.etable: (0) [0mFinished calculating energy tables.
+[0mcore.scoring.etable: (1) [0mFinished calculating energy tables.
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (4) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (5) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mprotocols.relax.FastRelax: (4) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (4) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (4) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (4) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (4) [0mEvaluation Creator active ... 
+[0mprotocols.relax.FastRelax: (5) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (5) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (5) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (5) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (5) [0mEvaluation Creator active ... 
+[0mcore.chemical.GlobalResidueTypeSet: (9) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (9) [0mTotal time to initialize 1.6 seconds.
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (8) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (8) [0mTotal time to initialize 1.68 seconds.
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (2) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (2) [0mTotal time to initialize 1.57 seconds.
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (7) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (7) [0mTotal time to initialize 1.58 seconds.
+[0mcore.chemical.GlobalResidueTypeSet: (3) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (3) [0mTotal time to initialize 1.6 seconds.
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (6) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (6) [0mTotal time to initialize 1.66 seconds.
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mcore.chemical.GlobalResidueTypeSet: (1) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (1) [0mTotal time to initialize 1.62 seconds.
+[0mcore.chemical.GlobalResidueTypeSet: (0) [0mFinished initializing fa_standard residue type set.  Created 587 residue types
+[0mcore.chemical.GlobalResidueTypeSet: (0) [0mTotal time to initialize 1.62 seconds.
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/rama/fd/all.ramaProb
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (9) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (8) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mprotocols.relax.FastRelax: (9) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (9) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (9) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (9) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (9) [0mEvaluation Creator active ... 
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+[0mprotocols.relax.FastRelax: (8) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (8) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (8) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (8) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (8) [0mEvaluation Creator active ... 
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (2) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (7) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (3) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (6) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mprotocols.relax.FastRelax: (2) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (2) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (2) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (2) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (2) [0mEvaluation Creator active ... 
+[0mprotocols.relax.FastRelax: (7) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (7) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (7) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (7) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (7) [0mEvaluation Creator active ... 
+[0mprotocols.relax.FastRelax: (3) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (3) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (3) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (3) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (3) [0mEvaluation Creator active ... 
+[0mprotocols.relax.FastRelax: (6) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (6) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (6) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (6) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (6) [0mEvaluation Creator active ... 
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (0) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (0) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/P_AA_pp/P_AA_n
+[0mcore.scoring.P_AA: (1) [0mshapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+[0mbasic.io.database: (1) [0mDatabase file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+[0mprotocols.relax.FastRelax: (0) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (0) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (0) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (0) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (0) [0mEvaluation Creator active ... 
+[0mprotocols.relax.FastRelax: (1) [0m================== Using default script ==================
+[0mprotocols.jd2.PDBJobInputter: (1) [0mInstantiate PDBJobInputter
+[0mprotocols.jd2.PDBJobInputter: (1) [0mPDBJobInputter::fill_jobs
+[0mprotocols.jd2.PDBJobInputter: (1) [0mpushed G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb nstruct indices 1 - 10
+[0mprotocols.evaluation.ChiWellRmsdEvaluatorCreator: (1) [0mEvaluation Creator active ... 
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:48 2018 assign job 1 batch: 00000
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0mStarting JobDistribution with 8 worker processes 
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:48 2018 assign job 2 batch: 00000
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:48 2018 assign job 3 batch: 00000
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:48 2018 assign job 4 batch: 00000
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:48 2018 assign job 5 batch: 00000
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:48 2018 assign job 6 batch: 00000
+[0mprotocols.jd2.PDBJobInputter: (2) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (2) [0mfilling pose from PDB G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.jd2.PDBJobInputter: (3) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (3) [0mfilling pose from PDB G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.jd2.PDBJobInputter: (5) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (5) [0mfilling pose from PDB G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.jd2.PDBJobInputter: (4) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (4) [0mfilling pose from PDB G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.jd2.PDBJobInputter: (9) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (9) [0mfilling pose from PDB G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:49 2018 assign job 7 batch: 00000
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:49 2018 assign job 8 batch: 00000
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 00:31:49 2018 assign job 9 batch: 00000
+[0mprotocols.jd2.PDBJobInputter: (6) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (6) [0mfilling pose from PDB G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.jd2.PDBJobInputter: (8) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (8) [0mfilling pose from PDB G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.jd2.PDBJobInputter: (7) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (7) [0mfilling pose from PDB G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mcore.import_pose.import_pose: (4) [0mFile 'G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb' automatically determined to be of type PDB
+[0mcore.import_pose.import_pose: (5) [0mFile 'G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb' automatically determined to be of type PDB
+[0mcore.import_pose.import_pose: (9) [0mFile 'G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb' automatically determined to be of type PDB
+[0mcore.import_pose.import_pose: (8) [0mFile 'G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb' automatically determined to be of type PDB
+[0mcore.import_pose.import_pose: (2) [0mFile 'G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb' automatically determined to be of type PDB
+[0mcore.import_pose.import_pose: (3) [0mFile 'G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb' automatically determined to be of type PDB
+[0mcore.import_pose.import_pose: (7) [0mFile 'G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb' automatically determined to be of type PDB
+[0mcore.import_pose.import_pose: (6) [0mFile 'G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb' automatically determined to be of type PDB
+[0mcore.conformation.Conformation: (4) [0mFound disulfide between residues 101 164
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 101 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 164 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 101 CYD
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 164 CYD
+[0mcore.conformation.Conformation: (4) [0mFound disulfide between residues 203 259
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 203 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 259 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 203 CYD
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 259 CYD
+[0mcore.conformation.Conformation: (4) [0mFound disulfide between residues 301 356
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 301 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 356 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 301 CYD
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 356 CYD
+[0mcore.conformation.Conformation: (4) [0mFound disulfide between residues 384 467
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 384 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 467 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 384 CYD
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 467 CYD
+[0mcore.conformation.Conformation: (4) [0mFound disulfide between residues 557 628
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 557 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 628 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 557 CYD
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 628 CYD
+[0mcore.conformation.Conformation: (4) [0mFound disulfide between residues 666 727
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 666 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 727 CYS
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 666 CYD
+[0mcore.conformation.Conformation: (4) [0mcurrent variant for 727 CYD
+[0mbasic.io.database: (4) [0mDatabase file opened: scoring/score_functions/elec_cp_reps.dat
+[0mcore.scoring.elec.util: (4) [0mRead 40 countpair representative atoms
+[0mcore.conformation.Conformation: (5) [0mFound disulfide between residues 101 164
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 101 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 164 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 101 CYD
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 164 CYD
+[0mcore.conformation.Conformation: (5) [0mFound disulfide between residues 203 259
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 203 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 259 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 203 CYD
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 259 CYD
+[0mcore.conformation.Conformation: (5) [0mFound disulfide between residues 301 356
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 301 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 356 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 301 CYD
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 356 CYD
+[0mcore.conformation.Conformation: (5) [0mFound disulfide between residues 384 467
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 384 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 467 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 384 CYD
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 467 CYD
+[0mcore.pack.dunbrack.RotamerLibrary: (4) [0mshapovalov_lib_fixes_enable option is true.
+[0mcore.pack.dunbrack.RotamerLibrary: (4) [0mshapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+[0mcore.pack.dunbrack.RotamerLibrary: (4) [0mBinary rotamer library selected: /home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+[0mcore.pack.dunbrack.RotamerLibrary: (4) [0mUsing Dunbrack library binary file '/home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+[0mcore.conformation.Conformation: (5) [0mFound disulfide between residues 557 628
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 557 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 628 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 557 CYD
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 628 CYD
+[0mcore.conformation.Conformation: (5) [0mFound disulfide between residues 666 727
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 666 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 727 CYS
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 666 CYD
+[0mcore.conformation.Conformation: (5) [0mcurrent variant for 727 CYD
+[0mbasic.io.database: (5) [0mDatabase file opened: scoring/score_functions/elec_cp_reps.dat
+[0mcore.scoring.elec.util: (5) [0mRead 40 countpair representative atoms
+[0mcore.pack.dunbrack.RotamerLibrary: (4) [0mDunbrack 2010 library took 0.29 seconds to load from binary
+[0mprotocols.relax.FastRelax: (4) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.pack.dunbrack.RotamerLibrary: (5) [0mshapovalov_lib_fixes_enable option is true.
+[0mcore.pack.dunbrack.RotamerLibrary: (5) [0mshapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+[0mcore.pack.dunbrack.RotamerLibrary: (5) [0mBinary rotamer library selected: /home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+[0mcore.pack.dunbrack.RotamerLibrary: (5) [0mUsing Dunbrack library binary file '/home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+[0mcore.pack.dunbrack.RotamerLibrary: (5) [0mDunbrack 2010 library took 0.29 seconds to load from binary
+[0mprotocols.relax.FastRelax: (5) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.conformation.Conformation: (9) [0mFound disulfide between residues 101 164
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 101 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 164 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 101 CYD
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 164 CYD
+[0mcore.conformation.Conformation: (9) [0mFound disulfide between residues 203 259
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 203 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 259 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 203 CYD
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 259 CYD
+[0mcore.conformation.Conformation: (9) [0mFound disulfide between residues 301 356
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 301 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 356 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 301 CYD
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 356 CYD
+[0mcore.conformation.Conformation: (9) [0mFound disulfide between residues 384 467
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 384 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 467 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 384 CYD
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 467 CYD
+[0mcore.conformation.Conformation: (9) [0mFound disulfide between residues 557 628
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 557 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 628 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 557 CYD
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 628 CYD
+[0mcore.conformation.Conformation: (9) [0mFound disulfide between residues 666 727
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 666 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 727 CYS
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 666 CYD
+[0mcore.conformation.Conformation: (9) [0mcurrent variant for 727 CYD
+[0mbasic.io.database: (9) [0mDatabase file opened: scoring/score_functions/elec_cp_reps.dat
+[0mcore.scoring.elec.util: (9) [0mRead 40 countpair representative atoms
+[0mcore.pack.dunbrack.RotamerLibrary: (9) [0mshapovalov_lib_fixes_enable option is true.
+[0mcore.pack.dunbrack.RotamerLibrary: (9) [0mshapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+[0mcore.pack.dunbrack.RotamerLibrary: (9) [0mBinary rotamer library selected: /home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+[0mcore.pack.dunbrack.RotamerLibrary: (9) [0mUsing Dunbrack library binary file '/home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+[0mcore.conformation.Conformation: (8) [0mFound disulfide between residues 101 164
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 101 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 164 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 101 CYD
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 164 CYD
+[0mcore.conformation.Conformation: (8) [0mFound disulfide between residues 203 259
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 203 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 259 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 203 CYD
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 259 CYD
+[0mcore.conformation.Conformation: (8) [0mFound disulfide between residues 301 356
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 301 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 356 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 301 CYD
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 356 CYD
+[0mcore.conformation.Conformation: (8) [0mFound disulfide between residues 384 467
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 384 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 467 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 384 CYD
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 467 CYD
+[0mcore.conformation.Conformation: (8) [0mFound disulfide between residues 557 628
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 557 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 628 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 557 CYD
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 628 CYD
+[0mcore.conformation.Conformation: (8) [0mFound disulfide between residues 666 727
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 666 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 727 CYS
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 666 CYD
+[0mcore.conformation.Conformation: (8) [0mcurrent variant for 727 CYD
+[0mcore.pack.dunbrack.RotamerLibrary: (9) [0mDunbrack 2010 library took 0.32 seconds to load from binary
+[0mbasic.io.database: (8) [0mDatabase file opened: scoring/score_functions/elec_cp_reps.dat
+[0mcore.scoring.elec.util: (8) [0mRead 40 countpair representative atoms
+[0mprotocols.relax.FastRelax: (9) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.conformation.Conformation: (2) [0mFound disulfide between residues 101 164
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 101 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 164 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 101 CYD
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 164 CYD
+[0mcore.pack.dunbrack.RotamerLibrary: (8) [0mshapovalov_lib_fixes_enable option is true.
+[0mcore.pack.dunbrack.RotamerLibrary: (8) [0mshapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+[0mcore.pack.dunbrack.RotamerLibrary: (8) [0mBinary rotamer library selected: /home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+[0mcore.conformation.Conformation: (2) [0mFound disulfide between residues 203 259
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 203 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 259 CYS
+[0mcore.pack.dunbrack.RotamerLibrary: (8) [0mUsing Dunbrack library binary file '/home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 203 CYD
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 259 CYD
+[0mcore.conformation.Conformation: (2) [0mFound disulfide between residues 301 356
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 301 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 356 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 301 CYD
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 356 CYD
+[0mcore.conformation.Conformation: (2) [0mFound disulfide between residues 384 467
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 384 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 467 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 384 CYD
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 467 CYD
+[0mcore.conformation.Conformation: (2) [0mFound disulfide between residues 557 628
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 557 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 628 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 557 CYD
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 628 CYD
+[0mcore.conformation.Conformation: (2) [0mFound disulfide between residues 666 727
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 666 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 727 CYS
+[0mcore.conformation.Conformation: (3) [0mFound disulfide between residues 101 164
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 101 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 164 CYS
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 666 CYD
+[0mcore.conformation.Conformation: (2) [0mcurrent variant for 727 CYD
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 101 CYD
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 164 CYD
+[0mcore.conformation.Conformation: (3) [0mFound disulfide between residues 203 259
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 203 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 259 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 203 CYD
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 259 CYD
+[0mcore.conformation.Conformation: (3) [0mFound disulfide between residues 301 356
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 301 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 356 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 301 CYD
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 356 CYD
+[0mcore.conformation.Conformation: (3) [0mFound disulfide between residues 384 467
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 384 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 467 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 384 CYD
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 467 CYD
+[0mcore.conformation.Conformation: (3) [0mFound disulfide between residues 557 628
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 557 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 628 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 557 CYD
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 628 CYD
+[0mcore.conformation.Conformation: (3) [0mFound disulfide between residues 666 727
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 666 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 727 CYS
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 666 CYD
+[0mcore.conformation.Conformation: (3) [0mcurrent variant for 727 CYD
+[0mcore.conformation.Conformation: (7) [0mFound disulfide between residues 101 164
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 101 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 164 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 101 CYD
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 164 CYD
+[0mcore.conformation.Conformation: (7) [0mFound disulfide between residues 203 259
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 203 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 259 CYS
+[0mbasic.io.database: (2) [0mDatabase file opened: scoring/score_functions/elec_cp_reps.dat
+[0mcore.scoring.elec.util: (2) [0mRead 40 countpair representative atoms
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 203 CYD
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 259 CYD
+[0mcore.conformation.Conformation: (7) [0mFound disulfide between residues 301 356
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 301 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 356 CYS
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.dunbrack.RotamerLibrary: (8) [0mDunbrack 2010 library took 0.33 seconds to load from binary
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 301 CYD
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 356 CYD
+[0mcore.conformation.Conformation: (7) [0mFound disulfide between residues 384 467
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 384 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 467 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 384 CYD
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 467 CYD
+[0mcore.conformation.Conformation: (7) [0mFound disulfide between residues 557 628
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 557 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 628 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 557 CYD
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 628 CYD
+[0mcore.conformation.Conformation: (7) [0mFound disulfide between residues 666 727
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 666 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 727 CYS
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 666 CYD
+[0mcore.conformation.Conformation: (7) [0mcurrent variant for 727 CYD
+[0mbasic.io.database: (3) [0mDatabase file opened: scoring/score_functions/elec_cp_reps.dat
+[0mcore.scoring.elec.util: (3) [0mRead 40 countpair representative atoms
+[0mprotocols.relax.FastRelax: (8) [0mCMD: repeat  20217.7  0  0  0.55
+[0mbasic.io.database: (7) [0mDatabase file opened: scoring/score_functions/elec_cp_reps.dat
+[0mcore.scoring.elec.util: (7) [0mRead 40 countpair representative atoms
+[0mcore.pack.dunbrack.RotamerLibrary: (2) [0mshapovalov_lib_fixes_enable option is true.
+[0mcore.pack.dunbrack.RotamerLibrary: (2) [0mshapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+[0mcore.pack.dunbrack.RotamerLibrary: (2) [0mBinary rotamer library selected: /home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+[0mcore.pack.dunbrack.RotamerLibrary: (2) [0mUsing Dunbrack library binary file '/home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+[0mcore.conformation.Conformation: (6) [0mFound disulfide between residues 101 164
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 101 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 164 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 101 CYD
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 164 CYD
+[0mcore.conformation.Conformation: (6) [0mFound disulfide between residues 203 259
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 203 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 259 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 203 CYD
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 259 CYD
+[0mcore.conformation.Conformation: (6) [0mFound disulfide between residues 301 356
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 301 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 356 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 301 CYD
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 356 CYD
+[0mcore.conformation.Conformation: (6) [0mFound disulfide between residues 384 467
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 384 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 467 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 384 CYD
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 467 CYD
+[0mcore.conformation.Conformation: (6) [0mFound disulfide between residues 557 628
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 557 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 628 CYS
+[0mcore.pack.dunbrack.RotamerLibrary: (3) [0mshapovalov_lib_fixes_enable option is true.
+[0mcore.pack.dunbrack.RotamerLibrary: (3) [0mshapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+[0mcore.pack.dunbrack.RotamerLibrary: (3) [0mBinary rotamer library selected: /home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 557 CYD
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 628 CYD
+[0mcore.pack.dunbrack.RotamerLibrary: (3) [0mUsing Dunbrack library binary file '/home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+[0mcore.conformation.Conformation: (6) [0mFound disulfide between residues 666 727
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 666 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 727 CYS
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 666 CYD
+[0mcore.conformation.Conformation: (6) [0mcurrent variant for 727 CYD
+[0mcore.pack.dunbrack.RotamerLibrary: (7) [0mshapovalov_lib_fixes_enable option is true.
+[0mcore.pack.dunbrack.RotamerLibrary: (7) [0mshapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+[0mcore.pack.dunbrack.RotamerLibrary: (7) [0mBinary rotamer library selected: /home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+[0mcore.pack.dunbrack.RotamerLibrary: (7) [0mUsing Dunbrack library binary file '/home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+[0mcore.pack.dunbrack.RotamerLibrary: (2) [0mDunbrack 2010 library took 0.32 seconds to load from binary
+[0mbasic.io.database: (6) [0mDatabase file opened: scoring/score_functions/elec_cp_reps.dat
+[0mcore.scoring.elec.util: (6) [0mRead 40 countpair representative atoms
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.dunbrack.RotamerLibrary: (3) [0mDunbrack 2010 library took 0.33 seconds to load from binary
+[0mprotocols.relax.FastRelax: (2) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.pack.dunbrack.RotamerLibrary: (7) [0mDunbrack 2010 library took 0.35 seconds to load from binary
+[0mprotocols.relax.FastRelax: (3) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.pack.dunbrack.RotamerLibrary: (6) [0mshapovalov_lib_fixes_enable option is true.
+[0mcore.pack.dunbrack.RotamerLibrary: (6) [0mshapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+[0mcore.pack.dunbrack.RotamerLibrary: (6) [0mBinary rotamer library selected: /home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+[0mcore.pack.dunbrack.RotamerLibrary: (6) [0mUsing Dunbrack library binary file '/home/snerli/rosetta/Rosetta_ref2015/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+[0mprotocols.relax.FastRelax: (7) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.pack.dunbrack.RotamerLibrary: (6) [0mDunbrack 2010 library took 0.36 seconds to load from binary
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mprotocols.relax.FastRelax: (6) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14671124 bytes
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14671124 bytes
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 14671124 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 14671124 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 14671124 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 14671124 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 14671124 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 14671124 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3089.93  2.65575  2.65575  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10837 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 13072724 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3077.17  2.67847  2.67847  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10754 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 12933532 bytes
+[0mcore.optimization.Minimizer: (8) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -3111.59  2.66081  2.66081  0.011
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10714 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.optimization.Minimizer: (9) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -3076.41  2.64661  2.64661  0.011
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10832 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 13134392 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 13133492 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2246.47  2.3589  2.3589  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10622 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11701088 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2267.75  2.39218  2.39218  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10635 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11676584 bytes
+[0mcore.optimization.Minimizer: (2) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -3076.58  2.78061  2.78061  0.011
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10761 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 13022092 bytes
+[0mcore.optimization.Minimizer: (3) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -3053.87  2.76931  2.76931  0.011
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10706 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.optimization.Minimizer: (7) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -3097.71  2.76156  2.76156  0.011
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 12919308 bytes
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10769 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.optimization.Minimizer: (6) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -3082.35  2.7045  2.7045  0.011
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10627 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 13133444 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 12727928 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2029.39  2.48349  2.48349  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10374 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 10985788 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2016.95  2.27889  2.27889  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10581 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11203696 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1781.92  2.50768  2.50768  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 0  -1781.92  -1781.92  2.50768  2.50768  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1781.92  2.50768  2.50768  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1781.92  2.50768  2.50768  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 11790 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14392908 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1777.45  2.32742  2.32742  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 0  -1777.45  -1777.45  2.32742  2.32742  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1777.45  2.32742  2.32742  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1777.45  2.32742  2.32742  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 12000 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14751748 bytes
+[0mcore.optimization.Minimizer: (8) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2259.01  2.32243  2.32243  0.1375
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10666 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.optimization.Minimizer: (9) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2257.77  2.3625  2.3625  0.1375
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10779 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 11748820 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 11961424 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3361.08  3.25007  3.25007  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10596 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 12793460 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3372.92  3.6794  3.6794  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10663 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 13026740 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2228.34  2.22891  2.22891  0.1375
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10648 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11860916 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2268.49  2.58944  2.58944  0.1375
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10457 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.optimization.Minimizer: (3) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2282.65  2.38217  2.38217  0.1375
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10629 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 11417664 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11765012 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2009.45  2.11091  2.11091  0.3025
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10546 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 11054980 bytes
+[0mcore.optimization.Minimizer: (6) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2176.05  2.09671  2.09671  0.1375
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10638 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 11702524 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2393.23  2.74557  2.74557  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10506 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11470956 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2448.06  2.95913  2.95913  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10707 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11936440 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -1765.28  2.0399  2.0399  0.55
+[0mprotocols.relax.FastRelax: (9) [0mMRP: 0  -1765.28  -1765.28  2.0399  2.0399  
+[0mprotocols.relax.FastRelax: (9) [0mCMD: accept_to_best  -1765.28  2.0399  2.0399  0.55
+[0mprotocols.relax.FastRelax: (9) [0mCMD: endrepeat  -1765.28  2.0399  2.0399  0.55
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 11840 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 14249308 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2089.61  2.64015  2.64015  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10319 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 10757020 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -1979.15  2.20345  2.20345  0.3025
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10545 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11172904 bytes
+[0mcore.optimization.Minimizer: (8) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2022.98  2.43035  2.43035  0.3025
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10491 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 10976988 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2156.66  2.77154  2.77154  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10498 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11158948 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2004.85  1.84125  1.84125  0.3025
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10394 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 10873560 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1830.64  2.57039  2.57039  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 1  -1830.64  -1830.64  2.57039  2.57039  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1830.64  2.57039  2.57039  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1830.64  2.57039  2.57039  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 11728 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14149192 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2022.76  2.4179  2.4179  0.3025
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10334 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 10748732 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1901.63  2.76762  2.76762  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 1  -1901.63  -1901.63  2.76762  2.76762  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1901.63  2.76762  2.76762  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1901.63  2.76762  2.76762  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 11925 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14769264 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -1785.07  2.41457  2.41457  0.55
+[0mprotocols.relax.FastRelax: (8) [0mMRP: 0  -1785.07  -1785.07  2.41457  2.41457  
+[0mprotocols.relax.FastRelax: (8) [0mCMD: accept_to_best  -1785.07  2.41457  2.41457  0.55
+[0mprotocols.relax.FastRelax: (8) [0mCMD: endrepeat  -1785.07  2.41457  2.41457  0.55
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 12003 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 14645276 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3411.91  3.57163  3.57163  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10619 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 12998092 bytes
+[0mcore.optimization.Minimizer: (3) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2046.44  2.24121  2.24121  0.3025
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10399 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 10998252 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -1759.13  2.1028  2.1028  0.55
+[0mprotocols.relax.FastRelax: (2) [0mMRP: 0  -1759.13  -1759.13  2.1028  2.1028  
+[0mprotocols.relax.FastRelax: (2) [0mCMD: accept_to_best  -1759.13  2.1028  2.1028  0.55
+[0mprotocols.relax.FastRelax: (2) [0mCMD: endrepeat  -1759.13  2.1028  2.1028  0.55
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 11786 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 14321660 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3475.89  3.5488  3.5488  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10639 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 13078120 bytes
+[0mcore.optimization.Minimizer: (9) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -3403.21  3.37269  3.37269  0.011
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10706 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 13040920 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2438.85  2.85483  2.85483  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10579 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11681056 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -1776.01  2.28373  2.28373  0.55
+[0mprotocols.relax.FastRelax: (7) [0mMRP: 0  -1776.01  -1776.01  2.28373  2.28373  
+[0mprotocols.relax.FastRelax: (7) [0mCMD: accept_to_best  -1776.01  2.28373  2.28373  0.55
+[0mprotocols.relax.FastRelax: (7) [0mCMD: endrepeat  -1776.01  2.28373  2.28373  0.55
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 11755 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 14153116 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2138.76  2.76383  2.76383  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10376 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 10859580 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2510.36  3.04673  3.04673  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10711 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -1785.7  1.81201  1.81201  0.55
+[0mprotocols.relax.FastRelax: (6) [0mMRP: 0  -1785.7  -1785.7  1.81201  1.81201  
+[0mprotocols.relax.FastRelax: (6) [0mCMD: accept_to_best  -1785.7  1.81201  1.81201  0.55
+[0mprotocols.relax.FastRelax: (6) [0mCMD: endrepeat  -1785.7  1.81201  1.81201  0.55
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 12069656 bytes
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 11802 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 14427372 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1858.51  2.6572  2.6572  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 2  -1858.51  -1858.51  2.6572  2.6572  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1858.51  2.6572  2.6572  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1858.51  2.6572  2.6572  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 11854 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14361800 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2201.38  2.84859  2.84859  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10449 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11167564 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -1795.86  2.29682  2.29682  0.55
+[0mprotocols.relax.FastRelax: (3) [0mMRP: 0  -1795.86  -1795.86  2.29682  2.29682  
+[0mprotocols.relax.FastRelax: (3) [0mCMD: accept_to_best  -1795.86  2.29682  2.29682  0.55
+[0mprotocols.relax.FastRelax: (3) [0mCMD: endrepeat  -1795.86  2.29682  2.29682  0.55
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 11819 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 14366784 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1924.59  2.68758  2.68758  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 2  -1924.59  -1924.59  2.68758  2.68758  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1924.59  2.68758  2.68758  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1924.59  2.68758  2.68758  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 11948 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14799192 bytes
+[0mcore.optimization.Minimizer: (8) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -3352.78  3.03949  3.03949  0.011
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10502 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 12755448 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3501.41  3.72478  3.72478  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10639 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 13092372 bytes
+[0mcore.optimization.Minimizer: (2) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -3407.48  3.05143  3.05143  0.011
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10609 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 13037048 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3528.67  3.77038  3.77038  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10696 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 13366832 bytes
+[0mcore.optimization.Minimizer: (9) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2399.19  2.52761  2.52761  0.1375
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10610 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 11579908 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2477.99  2.91894  2.91894  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10563 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11779400 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -3372.39  3.26265  3.26265  0.011
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10623 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 12861044 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2171.59  2.69179  2.69179  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10390 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11074692 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2534.19  3.1274  3.1274  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10674 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 12051424 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1881.3  2.54972  2.54972  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 3  -1881.3  -1881.3  2.54972  2.54972  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1881.3  2.54972  2.54972  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1881.3  2.54972  2.54972  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 11882 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14680332 bytes
+[0mcore.optimization.Minimizer: (3) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -3368.71  3.2903  3.2903  0.011
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10663 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 13097280 bytes
+[0mcore.optimization.Minimizer: (6) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -3389.34  3.04442  3.04442  0.011
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10434 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 12636388 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2231.8  2.93252  2.93252  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10505 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11371924 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2109.22  2.40032  2.40032  0.3025
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10520 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 11088908 bytes
+[0mcore.optimization.Minimizer: (8) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2386.46  2.8189  2.8189  0.1375
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10563 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 11588292 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1946.76  2.83691  2.83691  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 3  -1946.76  -1946.76  2.83691  2.83691  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1946.76  2.83691  2.83691  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1946.76  2.83691  2.83691  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 11898 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14933980 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3489.38  3.55817  3.55817  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10473 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 12845388 bytes
+[0mcore.optimization.Minimizer: (2) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2430.6  2.34793  2.34793  0.1375
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10585 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11775028 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -1842.56  2.38502  2.38502  0.55
+[0mprotocols.relax.FastRelax: (9) [0mMRP: 1  -1842.56  -1842.56  2.38502  2.38502  
+[0mprotocols.relax.FastRelax: (9) [0mCMD: accept_to_best  -1842.56  2.38502  2.38502  0.55
+[0mprotocols.relax.FastRelax: (9) [0mCMD: endrepeat  -1842.56  2.38502  2.38502  0.55
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 11870 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 14407712 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2430.73  2.45091  2.45091  0.1375
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10421 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 11493320 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3567.33  3.80308  3.80308  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10561 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 12999852 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2101.56  2.73085  2.73085  0.3025
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10521 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 11123820 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2502.44  2.76016  2.76016  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10521 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11868344 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2132.47  2.18247  2.18247  0.3025
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10396 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11061228 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2191.16  2.53683  2.53683  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10273 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 10999192 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2550.93  3.15423  3.15423  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10624 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2367.45  2.78318  2.78318  0.1375
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11936260 bytes
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10603 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11845340 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1897.39  2.44811  2.44811  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 4  -1897.39  -1897.39  2.44811  2.44811  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1897.39  2.44811  2.44811  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1897.39  2.44811  2.44811  0.55
+[0mprotocols::checkpoint: (4) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (4) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (4) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (1) [0mG*01:01_on_5opi_with_loops_fixed_with_tapbpr_0004 reported success in 43815 seconds
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0m[31m[1m[ ERROR ][0m TIME_STAMP: Sun Jun 10 12:42:04 2018 assign job 10 batch: 00000
+[0mprotocols.jd2.PDBJobInputter: (4) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (4) [0mfilling pose from saved copy G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.relax.FastRelax: (4) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14671124 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2147.73  2.30547  2.30547  0.3025
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10405 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -1831.87  2.66082  2.66082  0.55
+[0mprotocols.relax.FastRelax: (8) [0mMRP: 1  -1831.87  -1831.87  2.66082  2.66082  
+[0mprotocols.relax.FastRelax: (8) [0mCMD: accept_to_best  -1831.87  2.66082  2.66082  0.55
+[0mprotocols.relax.FastRelax: (8) [0mCMD: endrepeat  -1831.87  2.66082  2.66082  0.55
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 10970832 bytes
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 11980 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 14744568 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2241.94  2.96311  2.96311  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10436 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11214116 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2407.58  2.20866  2.20866  0.1375
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10556 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 11695260 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -1859.55  2.16947  2.16947  0.55
+[0mprotocols.relax.FastRelax: (2) [0mMRP: 1  -1859.55  -1859.55  2.16947  2.16947  
+[0mprotocols.relax.FastRelax: (2) [0mCMD: accept_to_best  -1859.55  2.16947  2.16947  0.55
+[0mprotocols.relax.FastRelax: (2) [0mCMD: endrepeat  -1859.55  2.16947  2.16947  0.55
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 11833 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 14541912 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1958.89  2.86466  2.86466  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 4  -1958.89  -1958.89  2.86466  2.86466  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1958.89  2.86466  2.86466  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1958.89  2.86466  2.86466  0.55
+[0mprotocols::checkpoint: (5) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (5) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (5) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (1) [0mG*01:01_on_5opi_with_loops_fixed_with_tapbpr_0005 reported success in 46164 seconds
+[0mprotocols.jd2.JobDistributor: (1) [0mno more batches to process... 
+[0mprotocols.jd2.PDBJobInputter: (5) [0mPDBJobInputter::pose_from_job
+[0mprotocols.jd2.PDBJobInputter: (5) [0mfilling pose from saved copy G*01:01_on_5opi_with_loops_fixed_with_tapbpr.pdb
+[0mprotocols.relax.FastRelax: (5) [0mCMD: repeat  20217.7  0  0  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 12026 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14671124 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -1877.38  2.17222  2.17222  0.55
+[0mprotocols.relax.FastRelax: (7) [0mMRP: 1  -1877.38  -1877.38  2.17222  2.17222  
+[0mprotocols.relax.FastRelax: (7) [0mCMD: accept_to_best  -1877.38  2.17222  2.17222  0.55
+[0mprotocols.relax.FastRelax: (7) [0mCMD: endrepeat  -1877.38  2.17222  2.17222  0.55
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 11793 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 14433592 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3109.16  2.76005  2.76005  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10821 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 13370320 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2100.77  2.01524  2.01524  0.3025
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10449 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 11120628 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2081.65  2.66359  2.66359  0.3025
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10410 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11102236 bytes
+[0mcore.optimization.Minimizer: (9) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -3489.8  3.18603  3.18603  0.011
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10799 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 13298368 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3102.32  2.74232  2.74232  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10787 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 13189312 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2268.01  2.59159  2.59159  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10677 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11813780 bytes
+[0mcore.optimization.LineMinimizer: (2) [0m[31m[1m[ ERROR ][0m [31mInaccurate G! step= 9.53674e-09 Deriv= -28.9758 Finite Diff= 2.63477e+07[0m
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -3457.3  3.10421  3.10421  0.011
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10626 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 12924528 bytes
+[0mcore.optimization.LineMinimizer: (8) [0m[31m[1m[ ERROR ][0m [31mInaccurate G! step= 9.53674e-09 Deriv= -31.7436 Finite Diff= 6.77026e+06[0m
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -3421.19  3.46489  3.46489  0.011
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10528 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 12855120 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -1825.91  1.91244  1.91244  0.55
+[0mprotocols.relax.FastRelax: (6) [0mMRP: 1  -1825.91  -1825.91  1.91244  1.91244  
+[0mprotocols.relax.FastRelax: (6) [0mCMD: accept_to_best  -1825.91  1.91244  1.91244  0.55
+[0mprotocols.relax.FastRelax: (6) [0mCMD: endrepeat  -1825.91  1.91244  1.91244  0.55
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 11846 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 14750004 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -1824.25  2.68195  2.68195  0.55
+[0mprotocols.relax.FastRelax: (3) [0mMRP: 1  -1824.25  -1824.25  2.68195  2.68195  
+[0mprotocols.relax.FastRelax: (3) [0mCMD: accept_to_best  -1824.25  2.68195  2.68195  0.55
+[0mprotocols.relax.FastRelax: (3) [0mCMD: endrepeat  -1824.25  2.68195  2.68195  0.55
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 11870 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 14697516 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2275.1  2.39563  2.39563  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10739 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11955864 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2021.88  2.60343  2.60343  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10561 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11104156 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1991.84  2.55489  2.55489  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10509 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11190972 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2468.25  2.56646  2.56646  0.1375
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10671 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 11951484 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1713.22  2.59016  2.59016  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 0  -1713.22  -1713.22  2.59016  2.59016  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1713.22  2.59016  2.59016  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1713.22  2.59016  2.59016  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 11928 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14801488 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1774.88  2.67048  2.67048  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 0  -1774.88  -1774.88  2.67048  2.67048  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1774.88  2.67048  2.67048  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1774.88  2.67048  2.67048  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 11949 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14773428 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -3434.5  3.21739  3.21739  0.011
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10594 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 12800336 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2146.48  2.41291  2.41291  0.3025
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10528 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 11245400 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2485.31  2.49515  2.49515  0.1375
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10583 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11830764 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3366.37  3.22754  3.22754  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10719 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 13028376 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2425.29  2.95754  2.95754  0.1375
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10630 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3419.01  3.40024  3.40024  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10653 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 12923908 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 11878824 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -1850.57  2.36092  2.36092  0.55
+[0mprotocols.relax.FastRelax: (9) [0mMRP: 2  -1850.57  -1850.57  2.36092  2.36092  
+[0mprotocols.relax.FastRelax: (9) [0mCMD: accept_to_best  -1850.57  2.36092  2.36092  0.55
+[0mprotocols.relax.FastRelax: (9) [0mCMD: endrepeat  -1850.57  2.36092  2.36092  0.55
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 11969 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 14813152 bytes
+[0mcore.optimization.Minimizer: (3) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -3390.44  3.43466  3.43466  0.011
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10756 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 13112096 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2182.03  2.37388  2.37388  0.3025
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10505 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11091856 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2328.04  2.83036  2.83036  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10728 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11962340 bytes
+[0mcore.optimization.Minimizer: (6) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -3470.1  3.12509  3.12509  0.011
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10621 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 13116176 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2136.64  2.80838  2.80838  0.3025
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10392 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 10980476 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2443.86  3.01882  3.01882  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10758 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11999260 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2040.02  2.68473  2.68473  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -1893.68  2.29575  2.29575  0.55
+[0mprotocols.relax.FastRelax: (2) [0mMRP: 2  -1893.68  -1893.68  2.29575  2.29575  
+[0mprotocols.relax.FastRelax: (2) [0mCMD: accept_to_best  -1893.68  2.29575  2.29575  0.55
+[0mprotocols.relax.FastRelax: (2) [0mCMD: endrepeat  -1893.68  2.29575  2.29575  0.55
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10580 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 11898 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11351312 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 14512520 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2162.69  2.79664  2.79664  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10589 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11352584 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1755.4  2.6498  2.6498  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 1  -1755.4  -1755.4  2.6498  2.6498  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1755.4  2.6498  2.6498  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1755.4  2.6498  2.6498  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 11893 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14832640 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -1873.77  2.78244  2.78244  0.55
+[0mprotocols.relax.FastRelax: (8) [0mMRP: 2  -1873.77  -1873.77  2.78244  2.78244  
+[0mprotocols.relax.FastRelax: (8) [0mCMD: accept_to_best  -1873.77  2.78244  2.78244  0.55
+[0mprotocols.relax.FastRelax: (8) [0mCMD: endrepeat  -1873.77  2.78244  2.78244  0.55
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 11980 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 14862312 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1892.64  2.67116  2.67116  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 1  -1892.64  -1892.64  2.67116  2.67116  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1892.64  2.67116  2.67116  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1892.64  2.67116  2.67116  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 12010 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14923628 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2504.16  2.39696  2.39696  0.1375
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10510 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 11693064 bytes
+[0mcore.optimization.LineMinimizer: (2) [0m[31m[1m[ ERROR ][0m [31mInaccurate G! step= 9.53674e-09 Deriv= -69.5603 Finite Diff= 2.7147e+07[0m
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -3469.26  3.36394  3.36394  0.011
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10593 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 13005504 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3429.3  3.59766  3.59766  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10612 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 12890548 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2395.61  2.72301  2.72301  0.1375
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10610 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11877548 bytes
+[0mcore.optimization.Minimizer: (9) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -3517.5  3.34244  3.34244  0.011
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10719 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 13306020 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3480.22  3.55561  3.55561  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10821 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 13317016 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2203.39  2.26759  2.26759  0.3025
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10335 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 10950592 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2451.01  2.28763  2.28763  0.1375
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10621 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 11956420 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2096.27  2.48095  2.48095  0.3025
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10414 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11124944 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2408.86  3.26932  3.26932  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10675 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11942832 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -1918.87  2.19149  2.19149  0.55
+[0mprotocols.relax.FastRelax: (7) [0mMRP: 2  -1918.87  -1918.87  2.19149  2.19149  
+[0mprotocols.relax.FastRelax: (7) [0mCMD: accept_to_best  -1918.87  2.19149  2.19149  0.55
+[0mprotocols.relax.FastRelax: (7) [0mCMD: endrepeat  -1918.87  2.19149  2.19149  0.55
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 11820 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 14733836 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2519.95  3.02645  3.02645  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10652 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11871752 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -3426.93  3.35601  3.35601  0.011
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10529 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 13026944 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2152.33  2.07079  2.07079  0.3025
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10477 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2519.35  2.72074  2.72074  0.1375
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 11223272 bytes
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10662 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11985936 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2207.95  2.87312  2.87312  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10535 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2111.25  2.97207  2.97207  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10511 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11343344 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11281656 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1930.23  2.76457  2.76457  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 2  -1930.23  -1930.23  2.76457  2.76457  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1930.23  2.76457  2.76457  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1930.23  2.76457  2.76457  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 11980 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 15043232 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2203.86  2.54909  2.54909  0.3025
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10496 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11228764 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1840.1  2.89631  2.89631  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 2  -1840.1  -1840.1  2.89631  2.89631  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1840.1  2.89631  2.89631  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1840.1  2.89631  2.89631  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 11832 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14745348 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2495.65  2.50938  2.50938  0.1375
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10758 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 12062076 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -1873.51  1.93827  1.93827  0.55
+[0mprotocols.relax.FastRelax: (6) [0mMRP: 2  -1873.51  -1873.51  1.93827  1.93827  
+[0mprotocols.relax.FastRelax: (6) [0mCMD: accept_to_best  -1873.51  1.93827  1.93827  0.55
+[0mprotocols.relax.FastRelax: (6) [0mCMD: endrepeat  -1873.51  1.93827  1.93827  0.55
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 11988 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 15035772 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -1912.59  2.42116  2.42116  0.55
+[0mprotocols.relax.FastRelax: (2) [0mMRP: 3  -1912.59  -1912.59  2.42116  2.42116  
+[0mprotocols.relax.FastRelax: (2) [0mCMD: accept_to_best  -1912.59  2.42116  2.42116  0.55
+[0mprotocols.relax.FastRelax: (2) [0mCMD: endrepeat  -1912.59  2.42116  2.42116  0.55
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 11917 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 14747364 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -1827.14  2.51888  2.51888  0.55
+[0mprotocols.relax.FastRelax: (3) [0mMRP: 2  -1827.14  -1827.14  2.51888  2.51888  
+[0mprotocols.relax.FastRelax: (3) [0mCMD: accept_to_best  -1827.14  2.51888  2.51888  0.55
+[0mprotocols.relax.FastRelax: (3) [0mCMD: endrepeat  -1827.14  2.51888  2.51888  0.55
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 11856 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 14615108 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3508.07  3.66575  3.66575  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10933 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 13632472 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3438.19  3.67295  3.67295  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10646 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 13091840 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2177.65  2.36359  2.36359  0.3025
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10564 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 11395360 bytes
+[0mcore.optimization.Minimizer: (8) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2469.01  2.79829  2.79829  0.1375
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10517 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 11689268 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2519.02  3.13009  3.13009  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10853 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 12267056 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -3457.14  3.24489  3.24489  0.011
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10521 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 12907912 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2496.28  3.08865  3.08865  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10649 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11934136 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -1888.2  2.31978  2.31978  0.55
+[0mprotocols.relax.FastRelax: (9) [0mMRP: 3  -1888.2  -1888.2  2.31978  2.31978  
+[0mprotocols.relax.FastRelax: (9) [0mCMD: accept_to_best  -1888.2  2.31978  2.31978  0.55
+[0mprotocols.relax.FastRelax: (9) [0mCMD: endrepeat  -1888.2  2.31978  2.31978  0.55
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 11998 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2195.68  2.95953  2.95953  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10615 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11450820 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 14874372 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1916.66  2.75841  2.75841  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 3  -1916.66  -1930.23  2.76457  2.76457  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1916.66  2.75841  2.75841  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1916.66  2.75841  2.75841  0.55
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 11974 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 14940048 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2176.34  2.94946  2.94946  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10510 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11277032 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2166.98  2.63123  2.63123  0.3025
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10329 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 10881228 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1881.14  2.8942  2.8942  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 3  -1881.14  -1881.14  2.8942  2.8942  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1881.14  2.8942  2.8942  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1881.14  2.8942  2.8942  0.55
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 11897 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 14961184 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -3518.01  3.56335  3.56335  0.011
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10718 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 13238460 bytes
+[0mcore.optimization.Minimizer: (3) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -3461.51  3.60297  3.60297  0.011
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10572 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 12989416 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -3512.58  3.34348  3.34348  0.011
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10575 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 13172472 bytes
+[0mcore.optimization.Minimizer: (4) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -3518.96  3.63665  3.63665  0.011
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10870 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -1880.71  2.58351  2.58351  0.55
+[0mprotocols.relax.FastRelax: (8) [0mMRP: 3  -1880.71  -1880.71  2.58351  2.58351  
+[0mprotocols.relax.FastRelax: (8) [0mCMD: accept_to_best  -1880.71  2.58351  2.58351  0.55
+[0mprotocols.relax.FastRelax: (8) [0mCMD: endrepeat  -1880.71  2.58351  2.58351  0.55
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 13486360 bytes
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 11923 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 14766444 bytes
+[0mcore.optimization.Minimizer: (5) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -3476.83  3.64423  3.64423  0.011
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10536 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 12893056 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2505.9  3.01565  3.01565  0.1375
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10820 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 12186392 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -3520.21  3.47175  3.47175  0.011
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10684 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 13268392 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2509.94  2.54256  2.54256  0.1375
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10628 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2516.9  2.91198  2.91198  0.1375
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10651 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 11780728 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11924600 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2480.54  3.02504  3.02504  0.1375
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10540 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11864504 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -2210.44  2.84525  2.84525  0.3025
+[0mcore.pack.task: (4) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (4) [0mbuilt 10513 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (4) [0mIG: 11322168 bytes
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -2158.46  2.85219  2.85219  0.3025
+[0mcore.pack.task: (5) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (5) [0mbuilt 10414 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (5) [0mIG: 11192736 bytes
+[0mprotocols.relax.FastRelax: (4) [0mCMD: ramp_repack_min  -1923.88  2.8054  2.8054  0.55
+[0mprotocols.relax.FastRelax: (4) [0mMRP: 4  -1923.88  -1930.23  2.76457  2.76457  
+[0mprotocols.relax.FastRelax: (4) [0mCMD: accept_to_best  -1923.88  2.8054  2.8054  0.55
+[0mprotocols.relax.FastRelax: (4) [0mCMD: endrepeat  -1923.88  2.8054  2.8054  0.55
+[0mprotocols::checkpoint: (4) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (4) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (4) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (4) [0m10 jobs considered, 2 jobs attempted in 88322 seconds
+[0mprotocols.relax.FastRelax: (5) [0mCMD: ramp_repack_min  -1871.36  2.76918  2.76918  0.55
+[0mprotocols.relax.FastRelax: (5) [0mMRP: 4  -1871.36  -1881.14  2.8942  2.8942  
+[0mprotocols.relax.FastRelax: (5) [0mCMD: accept_to_best  -1871.36  2.76918  2.76918  0.55
+[0mprotocols.relax.FastRelax: (5) [0mCMD: endrepeat  -1871.36  2.76918  2.76918  0.55
+[0mprotocols::checkpoint: (5) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (5) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (5) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (5) [0m10 jobs considered, 2 jobs attempted in 89151 seconds
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -2203  2.67097  2.67097  0.3025
+[0mcore.pack.task: (2) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (2) [0mbuilt 10528 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mInstantiating DensePDInteractionGraph
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2508.16  2.43596  2.43596  0.1375
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10629 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (2) [0mIG: 11276872 bytes
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 11947824 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2469.91  2.68635  2.68635  0.1375
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10447 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11649012 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2209.98  2.41773  2.41773  0.3025
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10513 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 11156640 bytes
+[0mcore.optimization.Minimizer: (8) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -3482.75  3.46906  3.46906  0.011
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10494 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 12907812 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -1920.99  2.38122  2.38122  0.55
+[0mprotocols.relax.FastRelax: (7) [0mMRP: 3  -1920.99  -1920.99  2.38122  2.38122  
+[0mprotocols.relax.FastRelax: (7) [0mCMD: accept_to_best  -1920.99  2.38122  2.38122  0.55
+[0mprotocols.relax.FastRelax: (7) [0mCMD: endrepeat  -1920.99  2.38122  2.38122  0.55
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 11861 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 14526824 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2150.34  2.49686  2.49686  0.3025
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10392 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11183404 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2499.68  2.47292  2.47292  0.1375
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10731 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 12059788 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2192.85  2.2275  2.2275  0.3025
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10411 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 11243596 bytes
+[0mprotocols.relax.FastRelax: (2) [0mCMD: ramp_repack_min  -1909.84  2.55149  2.55149  0.55
+[0mprotocols.relax.FastRelax: (2) [0mMRP: 4  -1909.84  -1912.59  2.42116  2.42116  
+[0mprotocols.relax.FastRelax: (2) [0mCMD: accept_to_best  -1909.84  2.55149  2.55149  0.55
+[0mprotocols.relax.FastRelax: (2) [0mCMD: endrepeat  -1909.84  2.55149  2.55149  0.55
+[0mprotocols::checkpoint: (2) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (2) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (2) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (2) [0m10 jobs considered, 1 jobs attempted in 93925 seconds
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -2175.84  2.27258  2.27258  0.3025
+[0mcore.pack.task: (9) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (9) [0mbuilt 10550 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (9) [0mIG: 11307792 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -1896.58  2.14529  2.14529  0.55
+[0mprotocols.relax.FastRelax: (6) [0mMRP: 3  -1896.58  -1896.58  2.14529  2.14529  
+[0mprotocols.relax.FastRelax: (6) [0mCMD: accept_to_best  -1896.58  2.14529  2.14529  0.55
+[0mprotocols.relax.FastRelax: (6) [0mCMD: endrepeat  -1896.58  2.14529  2.14529  0.55
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 11793 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 14644032 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -1864.86  2.4376  2.4376  0.55
+[0mprotocols.relax.FastRelax: (3) [0mMRP: 3  -1864.86  -1864.86  2.4376  2.4376  
+[0mprotocols.relax.FastRelax: (3) [0mCMD: accept_to_best  -1864.86  2.4376  2.4376  0.55
+[0mprotocols.relax.FastRelax: (3) [0mCMD: endrepeat  -1864.86  2.4376  2.4376  0.55
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 11756 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 14463440 bytes
+[0mprotocols.relax.FastRelax: (9) [0mCMD: ramp_repack_min  -1888.11  2.20184  2.20184  0.55
+[0mprotocols.relax.FastRelax: (9) [0mMRP: 4  -1888.11  -1888.2  2.31978  2.31978  
+[0mprotocols.relax.FastRelax: (9) [0mCMD: accept_to_best  -1888.11  2.20184  2.20184  0.55
+[0mprotocols.relax.FastRelax: (9) [0mCMD: endrepeat  -1888.11  2.20184  2.20184  0.55
+[0mprotocols::checkpoint: (9) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (9) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (9) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (9) [0m10 jobs considered, 1 jobs attempted in 98353 seconds
+[0mcore.optimization.Minimizer: (8) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2477.68  2.82775  2.82775  0.1375
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10562 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 11778192 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -3488.78  3.19852  3.19852  0.011
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10632 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 13090104 bytes
+[0mcore.optimization.Minimizer: (3) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -3470.36  3.5614  3.5614  0.011
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10541 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 13038052 bytes
+[0mcore.optimization.Minimizer: (6) [0m[1m[ WARNING ][0m LBFGS MAX CYCLES 2000 EXCEEDED, BUT FUNC NOT CONVERGED!
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -3554.15  3.36064  3.36064  0.011
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10634 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 13306084 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -2187.3  2.70694  2.70694  0.3025
+[0mcore.pack.task: (8) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (8) [0mbuilt 10373 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (8) [0mIG: 11101696 bytes
+[0mprotocols.relax.FastRelax: (8) [0mCMD: ramp_repack_min  -1888.79  2.62173  2.62173  0.55
+[0mprotocols.relax.FastRelax: (8) [0mMRP: 4  -1888.79  -1888.79  2.62173  2.62173  
+[0mprotocols.relax.FastRelax: (8) [0mCMD: accept_to_best  -1888.79  2.62173  2.62173  0.55
+[0mprotocols.relax.FastRelax: (8) [0mCMD: endrepeat  -1888.79  2.62173  2.62173  0.55
+[0mprotocols::checkpoint: (8) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (8) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (8) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (8) [0m10 jobs considered, 1 jobs attempted in 106901 seconds
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2465.18  2.75743  2.75743  0.1375
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10538 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11870948 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2518.07  2.55381  2.55381  0.1375
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10567 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 11784016 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -2159.25  2.60424  2.60424  0.3025
+[0mcore.pack.task: (3) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (3) [0mbuilt 10367 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (3) [0mIG: 11142840 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2517.68  2.47673  2.47673  0.1375
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10672 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 12065184 bytes
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -2220.77  2.46166  2.46166  0.3025
+[0mcore.pack.task: (7) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (7) [0mbuilt 10426 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (7) [0mIG: 11028540 bytes
+[0mprotocols.relax.FastRelax: (3) [0mCMD: ramp_repack_min  -1881.03  2.56749  2.56749  0.55
+[0mprotocols.relax.FastRelax: (3) [0mMRP: 4  -1881.03  -1881.03  2.56749  2.56749  
+[0mprotocols.relax.FastRelax: (3) [0mCMD: accept_to_best  -1881.03  2.56749  2.56749  0.55
+[0mprotocols.relax.FastRelax: (3) [0mCMD: endrepeat  -1881.03  2.56749  2.56749  0.55
+[0mprotocols::checkpoint: (3) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (3) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (3) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (3) [0m10 jobs considered, 1 jobs attempted in 110857 seconds
+[0mprotocols.relax.FastRelax: (7) [0mCMD: ramp_repack_min  -1929.23  2.40212  2.40212  0.55
+[0mprotocols.relax.FastRelax: (7) [0mMRP: 4  -1929.23  -1929.23  2.40212  2.40212  
+[0mprotocols.relax.FastRelax: (7) [0mCMD: accept_to_best  -1929.23  2.40212  2.40212  0.55
+[0mprotocols.relax.FastRelax: (7) [0mCMD: endrepeat  -1929.23  2.40212  2.40212  0.55
+[0mprotocols::checkpoint: (7) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (7) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (7) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.JobDistributor: (7) [0m10 jobs considered, 1 jobs attempted in 111460 seconds
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -2193.9  2.27547  2.27547  0.3025
+[0mcore.pack.task: (6) [0mPacker task: initialize from command line() 
+[0mcore.pack.pack_rotamers: (6) [0mbuilt 10476 rotamers at 746 positions.
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mInstantiating DensePDInteractionGraph
+[0mcore.pack.interaction_graph.interaction_graph_factory: (6) [0mIG: 11315884 bytes
+[0mprotocols.relax.FastRelax: (6) [0mCMD: ramp_repack_min  -1903.4  2.20572  2.20572  0.55
+[0mprotocols.relax.FastRelax: (6) [0mMRP: 4  -1903.4  -1903.4  2.20572  2.20572  
+[0mprotocols.relax.FastRelax: (6) [0mCMD: accept_to_best  -1903.4  2.20572  2.20572  0.55
+[0mprotocols.relax.FastRelax: (6) [0mCMD: endrepeat  -1903.4  2.20572  2.20572  0.55
+[0mprotocols::checkpoint: (6) [0mDeleting checkpoints of FastRelax
+[0mcore.conformation.util: (6) [0mNon-ideal residue detected:  Residue #1 atom #3(  C   ) :  Ideal theta=1.20079, Inspected theta=1.1353 (in Radians)
+[0mcore.io.silent: (6) [0mdetected attempt to write non-ideal pose to silent-file...Automatically switching to binary silent-struct type
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0mMaster Node: Finished sending spin down signals to slaves
+[0mprotocols.jd2.MPIFileBufJobDistributor: (1) [0mMaster Node stats: jobs-send out: 10  returned: 10  bad input jobs: 0
+[0mprotocols.jd2.JobDistributor: (6) [0m10 jobs considered, 1 jobs attempted in 114460 seconds
+[0mprotocols::checkpoint: (2) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (4) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (3) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (5) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (8) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (6) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (1) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (7) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (9) [0mDeleting checkpoints of FastRelax
+[0mprotocols::checkpoint: (0) [0mDeleting checkpoints of FastRelax

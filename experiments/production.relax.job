@@ -1,0 +1,52 @@
+#
+#
+# JOB TEMPLATE FOR BAKER CLUSTER
+#
+# Your job name
+#$ -N ROSETTAjob
+#
+# User current working directory
+#$ -cwd
+#
+# Don’t combine input and output
+#$ -j y
+#
+# Pass your required variables
+#$ -v $PATH,$LD_LIBRARY_PATH
+#
+#NSTRUCT=$( `echo $NSLOTS | awk ‘{print $1-3}’`)
+#echo $NSTRUCT
+NSTRUCT=`echo $NSLOTS | awk '{print $1-3}'`
+PATH=$PATH:/home/snerli/rosetta/Rosetta_ref2015/main/source/bin
+LOGS=logs_`echo $PBS_JOBID | awk -v FS="." '{print $1}'`
+mkdir -p $LOGS
+
+#
+echo ""
+echo $PATH
+echo $LD_LIBRARY_PATH
+echo $TMPDIR
+echo ""
+echo "Executing on : $HOSTNAME"
+echo "Number of hosts operating on : $NHOSTS"
+echo "Number of queued slots in use for parallel job: $NSLOTS"
+# where $NSLOTS is as submitted to pe command to the OpenGrid SGE scheduler
+echo ""
+echo "Running on $NSLOTS cpus …"
+#
+# Workaround for bash patch (Shellshock?) incompatibilities regarding exported functions
+unset module
+#
+#Current Rosetta binaries
+#/home/snerli/development/main/source/bin/relax.linuxgccrelease -out:suffix _backrubbed -s tap_B.pdb -out:suffix _br -database /home/snerli/development/main/database/ -backrub:ntrials 100 -backrub:mc_kt 0.6
+EXE=/home/snerli/rosetta/Rosetta_ref2015/main/source/bin/relax.mpi.linuxgccrelease
+CMDLINE="-s $1 -in:file:movemap $2 -database /home/snerli/rosetta/Rosetta_ref2015/main/database -out:file:silent $1_decoys_relaxed.out"
+CYCLES="-out:nstruct 5 "
+echo $EXE
+echo $CMDLINE
+echo $CYCLES
+
+mpiexec -n $NSLOTS $EXE $CMDLINE $CYCLES
+
+
+exit

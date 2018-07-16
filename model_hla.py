@@ -26,8 +26,10 @@ from input_output.output.silent import SILENT
 from thread.thread import THREAD
 from thread.pre_thread import PRE_THREADING
 
-from database.HLA_sequences_180 import hla_sequences_180
-from database.HLA_sequences_complex import hla_sequences
+#from database.HLA_sequences_180 import hla_sequences_180
+from database.HLA_sequences import hla_sequences
+# added b2m sequences - ACM
+from database.beta2m_sequences import beta2m_sequences
 
 # import other required libraries
 import os
@@ -38,7 +40,7 @@ class MODEL_HLA:
 
     peptide_header = ""
     peptide_sequence = ""
-    #beta2m = "MIQRTPKIQVYSRHPAENGKSNFLNCYVSGFHPSDIEVDLLKNGERIEKVEHSDLSFSKDWSFYLLYYTEFTPTEKDEYACRVNHVTLSQPKIVKWDRDM"
+    beta2m_sequence = ""
     tcr = ""
     mhc_fasta = None
 
@@ -66,6 +68,7 @@ class MODEL_HLA:
     def apply(self):
 
         self.read_hla_sequences()
+        #self.read_beta2m_sequences()
         pre_thread = PRE_THREADING(self.get_template(), self.mhc_fasta,
                             self.peptide_header, self.peptide_sequence,
                             self.args)
@@ -73,22 +76,35 @@ class MODEL_HLA:
         threader.apply()
         #self.treatment_post_homology_modeling()
 
+# get beta2m
     def get_template(self):
         template_ = TEMPLATE(self.args.get_template_pdb())
         template_.treat_template_structure(self.args.get_mhc_chain(),
+                                            self.args.get_beta2m_chain(),
                                             self.args.get_peptide_chain(),
-                                            self.args.is_no_trim_mhc_flag_set())
+                                            self.args.is_no_trim_mhc_flag_set(), self.args.get_mhc_length())
         return template_
 
     def read_from_map_and_write_to_fasta(self, fasta_file_handler, datamap):
         for key, value in datamap.items():
             fasta_file_handler.write(">"+key+"\n")
-            fasta_file_handler.write(value+self.args.get_beta2m()+self.peptide_sequence+self.tcr+"\n")
+            fasta_file_handler.write(value+self.get_beta2m_sequence()+self.peptide_sequence+self.tcr+"\n")
 
     def read_key_from_map_and_write_to_fasta(self, fasta_file_handler, datamap, key):
         fasta_file_handler.write(">"+key+"\n")
-        fasta_file_handler.write(datamap[key]+self.args.get_beta2m()+self.peptide_sequence+self.tcr+"\n")
-
+        fasta_file_handler.write(datamap[key]+self.get_beta2m_sequence()+self.peptide_sequence+self.tcr+"\n")
+    
+    def get_beta2m_sequence(self):
+        beta_list_file_handler = open(self.args.get_beta2m(), "r")
+        for line in beta_list_file_handler:
+            # remove for and read just the line
+            line = line.rstrip()
+            print("Santrupti")
+            print (line)
+            key = line
+        beta_list_file_handler.close()
+        return beta2m_sequences[key]
+    
     def read_hla_sequences(self):
         if self.args.get_target_fasta() == None:
             hla_file_handler = open(self.args.get_mhcs(), "r")
@@ -98,12 +114,12 @@ class MODEL_HLA:
                 line = line.rstrip()
                 if line.lower() == "all":
                     if self.args.is_no_trim_mhc_flag_set():
-                        self.read_from_map_and_write_to_fasta(fasta_file_handler, hla_sequences_180)
+                        self.read_from_map_and_write_to_fasta(fasta_file_handler, hla_sequences)
                     else:
                         self.read_from_map_and_write_to_fasta(fasta_file_handler, hla_sequences)
                 else:
                     if self.args.is_no_trim_mhc_flag_set():
-                        self.read_key_from_map_and_write_to_fasta(fasta_file_handler, hla_sequences_180, line)
+                        self.read_key_from_map_and_write_to_fasta(fasta_file_handler, hla_sequences, line)
                     else:
                         self.read_key_from_map_and_write_to_fasta(fasta_file_handler, hla_sequences, line)
             hla_file_handler.close()

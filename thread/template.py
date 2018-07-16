@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#       Sgourakis Lab
+#   Sgourakis Lab
 #   Author: Santrupti Nerli
 #   Date: January 26, 2017
 #   Email: snerli@ucsc.edu
@@ -46,14 +46,15 @@ class TEMPLATE:
     def get_template_path(self):
         return os.path.abspath(os.path.dirname(self.template_pdb))+"/"
 
-    def trim_pdb(self, mhc_chain, peptide_chain):
+    def trim_pdb(self, mhc_chain, beta2_chain, peptide_chain, mhc_length):
         p = PDBParser()
         s = p.get_structure('X', self.template_pdb)
         class ResSelect(Select):
             def accept_residue(self, res):
-                if res.id[1] >= 181 and res.parent.id == mhc_chain:
+                # bug: need to make this generic in terms of MHC length
+                if res.id[1] >= mhc_length and res.parent.id == mhc_chain:
                     return False
-                if res.parent.id != mhc_chain and res.parent.id != peptide_chain:
+                if res.parent.id != mhc_chain and res.parent.id !=beta2_chain and res.parent.id != peptide_chain:
                     return False
                 else:
                     return True
@@ -70,12 +71,12 @@ class TEMPLATE:
         template_pdb_name = self.get_name()
         self.template_pdb = template_pdb_name + ".cropped.pdb"
 
-    def treat_template_structure(self, mhc_chain, peptide_chain, trim_mhc, idealize_relax = False):
+    def treat_template_structure(self, mhc_chain, beta2m_chain, peptide_chain, trim_mhc, mhc_length, idealize_relax = False):
 
         cleanATOM(self.template_pdb)
         self.append_clean_pdb()
         if trim_mhc:
-            self.trim_pdb(mhc_chain, peptide_chain)
+            self.trim_pdb(mhc_chain, beta2m_chain, peptide_chain, mhc_length)
         self.template_pose = pose_from_pdb(self.template_pdb)
         if idealize_relax == True:
             self.template_pose = IDEALIZE().idealize_pdb(template_pose)
