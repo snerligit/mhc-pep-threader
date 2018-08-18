@@ -16,7 +16,7 @@ from pyrosetta.rosetta.core.scoring import *
 
 class IDEALIZE:
 
-    def idealize_pdb(pose):
+    def idealize_pdb(self, pose):
         ideal = IdealizeMover()
         ideal.apply(pose)
         return pose

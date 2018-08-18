@@ -34,22 +34,24 @@ class THREAD:
 
     def apply(self):
 
-        self.do_partial_threading()
+        if self.pre_threader != None:
+            self.do_partial_threading()
 
     def do_partial_threading(self):
 
         alignment_vec = read_aln("grishin", self.pre_threader.get_grishin_file_name())
-        ctr = 0
         for vec in alignment_vec:
-            new_pose = pose_from_sequence(self.pre_threader.get_target().get_sequence(self.pre_threader.get_mhc_header(ctr)), "fa_standard")
+            new_pose = pose_from_sequence(self.pre_threader.get_target_sequence(), "fa_standard")
             thread = PartialThreadingMover(vec, self.pre_threader.get_template().get_pose())
+            #fjd = MPI_FILE_BUF_JOB_DISTRIBUTOR(thread)
+            #fjd.apply()
+
             thread.apply(new_pose)
 
             threaded = new_pose
-            tag = self.pre_threader.get_target_file_name(self.pre_threader.get_mhc_header(ctr))
+            tag = self.pre_threader.get_target_file_name()
             threaded.dump_pdb(tag+".pdb")
             movemap = MOVEMAP(tag+".pdb", self.pre_threader.args.get_pep_start_index(),
                                 self.pre_threader.get_pep_length(), self.pre_threader.args.get_groove_distance(),
                                 tag+".movemap", True)
             movemap.apply()
-            ctr += 1

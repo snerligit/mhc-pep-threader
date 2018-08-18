@@ -6,24 +6,54 @@
 #   Email: snerli@ucsc.edu
 #
 
-# Load the Rosetta commands for use in the Python shell
-from pyrosetta import *
+# Load mpi4py library
+from mpi4py import MPI
 
 class JOB_DISTRIBUTOR:
 
-    filename = ""
-    nstruct = 1
-    score_function = None
-    job_dist_obj = None
+    rank = -1
 
-    def __init__(self, filename, nstruct=1, scorefxn="ref2015"):
-        self.filename = filename
-        self.score_function = create_score_function(scorefxn)
-        self.nstruct = nstruct
-        self.job_dist_obj = PyJobDistributor(self.filename, self.nstruct, self.score_function)
+    def apply(self, njobs, fun):
 
-    def get_dist_obj(self):
-        return self.job_dist_obj
+        comm = MPI.COMM_WORLD
 
-    def set_native(self, native):
-        self.job_dist_obj.native_pose(native)
+        print ("No. of jobs received: ", njobs )
+
+        self.rank = comm.Get_rank()
+        size = comm.Get_size()
+
+        '''
+        myjobs = []
+
+        if rank == 0:
+            jobs = list(range(njobs))
+            jobs.extend( [None]*(size - njobs % size) )
+            n = len(jobs)/size
+            print ("Size of n: ", n, " and jobs: ", len(jobs) )
+            for i in range(size):
+                queue = []  # list of jobs for individual cpu
+                for j in range(int(n)):
+                    print ("math: ", j*size+i)
+                    queue.append(jobs[j*size+i])
+
+                if( i == 0 ):
+                    myjobs = queue
+                else:
+                    # now sending the queue to the process
+                    logger.info('Sending %s to node %s' % (queue, i) )
+                    comm.send(queue, dest=i)
+        else:
+            # getting decoy lists
+            myjobs = comm.recv(source=0)
+
+        print('Node %s, got queue:%s' % (rank, myjobs) )
+
+        for j in myjobs:
+            if j is not None and j < njobs:
+                print (" the value of j is: ", j)
+                fun(j)
+        '''
+        for i in range(njobs):
+            if i%size != self.rank: continue
+            print ("Performing task ", i, " now in rank: ", self.rank )
+            fun(i)

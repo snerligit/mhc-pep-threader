@@ -16,20 +16,15 @@ from pyrosetta.rosetta.core.scoring import *
 
 class RELAX:
 
-    pose = None
-
-    def __init__(self, pose):
-        self.pose = pose
-
-    def relax_pdb(self):
+    def relax_pdb(self, pose):
         relax = FastRelax()
         relax.set_scorefxn(get_fa_scorefxn())
-        relax.apply(self.pose)
+        relax.apply(pose)
         return pose
 
-    def relax_pdb_with_movemap(self, movemap):
+    def relax_pdb_with_movemap(self, pose, movemap):
         relax = FastRelax()
         relax.set_scorefxn(get_fa_scorefxn())
         relax.set_movemap(movemap)
-        relax.apply(self.pose)
-        return self.pose
+        relax.apply(pose)
+        return pose

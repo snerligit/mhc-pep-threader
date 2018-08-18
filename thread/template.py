@@ -16,6 +16,9 @@ from pyrosetta.rosetta.core.scoring import *
 
 from Bio.PDB import *
 
+from idealize_relax.idealize import IDEALIZE
+from idealize_relax.relax import RELAX
+
 
 class TEMPLATE:
 
@@ -78,5 +81,6 @@ class TEMPLATE:
             self.trim_pdb(mhc_chain, peptide_chain)
         self.template_pose = pose_from_pdb(self.template_pdb)
         if idealize_relax == True:
+            template_pose = self.template_pose
             self.template_pose = IDEALIZE().idealize_pdb(template_pose)
             self.template_pose = RELAX().relax_pdb(template_pose)

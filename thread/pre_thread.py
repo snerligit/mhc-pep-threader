@@ -29,32 +29,34 @@ import sys
 
 class PRE_THREADING:
 
-    target = None
     template = None
     alignment = None
-    grishin_file_name = None
-    mhc_fasta_file = ""
-    peptide_sequence = ""
-    peptide_header = ""
-    mhc_headers = []
+    grishin_file_name = ""
+    complex_header = ""
+    complex_sequence = ""
     #pep_start_index = 181
     #pep_start_index = 376
     pep_length = 0
     args = None
 
-    def __init__(self, template, mhc_fasta_file, peptide_header, peptide_sequence, args):
+    def __init__(self, template, complex_sequence, complex_header, args):
 
         self.template = template
-        self.mhc_fasta_file = mhc_fasta_file
-        self.peptide_sequence = peptide_sequence
-        self.peptide_header = peptide_header
+        self.complex_sequence = complex_sequence
+        self.complex_header = complex_header
         self.args = args
-        self.pep_length = len(list(peptide_sequence))
+        self.pep_length = len(list(self.complex_header.split("_")[1]))
         self.align_template_target_sequences()
 
-    def get_target_file_name(self, header="HLAs"):
+    def get_target_file_name(self):
+            fields = self.complex_header.split("_")
+            mhc_header = fields[0]
+            peptide_header = fields[1]
+            return mhc_header+"_on_"+self.template.get_stripped_name()+"_with_"+peptide_header
 
-            return header+"_on_"+self.template.get_stripped_name()+"_with_"+self.peptide_header
+    def get_target_sequence(self):
+        
+        return self.complex_sequence
 
     def get_pep_start_index(self, sequence):
 
@@ -66,13 +68,20 @@ class PRE_THREADING:
             print("Retry with different alignment scheme")
             exit(1)
 
-    def create_grishin(self, key, aligned_target, aligned_query, is_new = False):
+    def check_if_grishin_file_exists(self, filename):
+        for f in self.grishin_file_name:
+            if f == filename:
+                return True
+
+    def create_grishin(self, aligned_target, aligned_query, is_new = False):
 
         # template_seq = query_sequence , target_seq =  target_sequence
-        grishin = GRISHIN(self.get_target_file_name(), key, self.template.get_name(),
+        grishin = GRISHIN(self.get_target_file_name(), self.complex_header.split("_")[0], self.template.get_name(),
                             aligned_target, aligned_query)
-        self.grishin_file_name = grishin.get_file_name()
-        grishin.write()
+
+        if not self.check_if_grishin_file_exists(grishin.get_file_name()):
+            self.grishin_file_name = grishin.get_file_name()
+            grishin.write()
 
     def get_grishin_file_name(self):
 
@@ -82,13 +91,9 @@ class PRE_THREADING:
 
         return self.template
 
-    def get_target(self):
+    def get_mhc_header(self):
 
-        return self.target
-
-    def get_mhc_header(self, key):
-
-        return self.mhc_headers[key]
+        return self.complex_header.split("_")[0]
 
     def get_pep_length(self):
 
@@ -96,20 +101,14 @@ class PRE_THREADING:
 
     def align_template_target_sequences(self, clustal=True):
 
-        self.target = FASTA(self.mhc_fasta_file)
+        key = self.complex_header.split("_")[0]
         if clustal == False:
-            self.target.read()
-            target_seqs = self.target.get_sequences()
-
-            for key,value in target_seqs.items():
-                self.alignment = ALIGN(self.template.get_sequence(), self.target.get_sequence(key))
-                self.alignment.align()
-                self.create_grishin(key, self.alignment.get_aligned_target(), self.alignment.get_aligned_query())
-                self.mhc_headers.append(key)
+            self.alignment = ALIGN(self.template.get_sequence(), self.complex_sequence)
+            self.alignment.align()
+            self.create_grishin(self.alignment.get_aligned_target(), self.alignment.get_aligned_query())
 
         else:
-            print(self.args.get_target_fasta())
-            self.alignment = ALIGN(self.template.get_sequence(), None, self.mhc_fasta_file)
+            self.alignment = ALIGN(self.template.get_sequence(), self.complex_sequence)
             self.alignment.clustal()
             alignment = FASTA(self.alignment.get_clustal_output_filename())
             alignment.read()
@@ -117,5 +116,4 @@ class PRE_THREADING:
 
             for key,value in aln_seqs.items():
                 if key != 'template':
-                    self.create_grishin(key, value, aln_seqs['template'])
-                    self.mhc_headers.append(key)
+                    self.create_grishin(value, aln_seqs['template'])

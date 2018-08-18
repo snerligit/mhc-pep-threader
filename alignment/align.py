@@ -39,7 +39,7 @@ class ALIGN:
         else:
             self.clustal_input = input_fasta
             self.input_fasta = True
-        self.clustal_output = "clustal_default_output.fasta"
+        self.clustal_output = self.clustal_input+"_clustal_output.fasta"
 
     def get_alignment(self):
         return self.aln
@@ -58,6 +58,15 @@ class ALIGN:
         query = StripedSmithWaterman(self.template_seq, protein=True, substitution_matrix=BLOSUM(self.matrix_type).get_matrix())
         self.aln = query(self.target_seq)
 
+    def check_if_template_exists(self):
+        if self.input_fasta == True:
+            readfilehandle = open(self.clustal_input, "r")
+            for line in readfilehandle:
+                line = line.rstrip()
+                if ">template" in line:
+                    return True
+            readfilehandle.close()
+
     def init_clustal_input(self):
         if self.input_fasta == False:
             writefilehandle = open(self.clustal_input, "w")
@@ -65,11 +74,13 @@ class ALIGN:
             writefilehandle.write(self.template_seq+"\n")
             writefilehandle.write(">target\n")
             writefilehandle.write(self.target_seq+"\n")
+            writefilehandle.close()
         else:
-            writefilehandle = open(self.clustal_input, "a")
-            writefilehandle.write(">template\n")
-            writefilehandle.write(self.template_seq+"\n")
-        writefilehandle.close()
+            if not self.check_if_template_exists():
+                writefilehandle = open(self.clustal_input, "a")
+                writefilehandle.write(">template\n")
+                writefilehandle.write(self.template_seq+"\n")
+                writefilehandle.close()
 
 
     def clustal(self):
