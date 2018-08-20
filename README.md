@@ -8,8 +8,6 @@ This protocol requires the following libraries
 
     * Biopython
 
-    * scikit-bio
-
     * clustal omega (command line interface)
     
     * Rosetta

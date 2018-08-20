@@ -55,7 +55,7 @@ class PRE_THREADING:
             return mhc_header+"_on_"+self.template.get_stripped_name()+"_with_"+peptide_header
 
     def get_target_sequence(self):
-        
+
         return self.complex_sequence
 
     def get_pep_start_index(self, sequence):
@@ -99,21 +99,15 @@ class PRE_THREADING:
 
         return self.pep_length
 
-    def align_template_target_sequences(self, clustal=True):
+    def align_template_target_sequences(self):
 
         key = self.complex_header.split("_")[0]
-        if clustal == False:
-            self.alignment = ALIGN(self.template.get_sequence(), self.complex_sequence)
-            self.alignment.align()
-            self.create_grishin(self.alignment.get_aligned_target(), self.alignment.get_aligned_query())
+        self.alignment = ALIGN(self.template.get_sequence(), self.complex_sequence)
+        self.alignment.clustal()
+        alignment = FASTA(self.alignment.get_clustal_output_filename())
+        alignment.read()
+        aln_seqs = alignment.get_sequences()
 
-        else:
-            self.alignment = ALIGN(self.template.get_sequence(), self.complex_sequence)
-            self.alignment.clustal()
-            alignment = FASTA(self.alignment.get_clustal_output_filename())
-            alignment.read()
-            aln_seqs = alignment.get_sequences()
-
-            for key,value in aln_seqs.items():
-                if key != 'template':
-                    self.create_grishin(value, aln_seqs['template'])
+        for key,value in aln_seqs.items():
+            if key != 'template':
+                self.create_grishin(value, aln_seqs['template'])

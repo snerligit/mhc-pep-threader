@@ -8,8 +8,6 @@
 
 # additional bio libraries
 
-#from skbio.core.alignment import StripedSmithWaterman
-from skbio.alignment import StripedSmithWaterman
 from Bio.Align.Applications import ClustalOmegaCommandline
 
 #custom libraries
@@ -41,22 +39,8 @@ class ALIGN:
             self.input_fasta = True
         self.clustal_output = self.clustal_input+"_clustal_output.fasta"
 
-    def get_alignment(self):
-        return self.aln
-
     def get_clustal_output_filename(self):
         return self.clustal_output
-
-    def get_aligned_query(self):
-        return self.aln.aligned_query_sequence
-
-    def get_aligned_target(self):
-        return self.aln.aligned_target_sequence
-
-    def align(self):
-
-        query = StripedSmithWaterman(self.template_seq, protein=True, substitution_matrix=BLOSUM(self.matrix_type).get_matrix())
-        self.aln = query(self.target_seq)
 
     def check_if_template_exists(self):
         if self.input_fasta == True:
