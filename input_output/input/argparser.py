@@ -30,11 +30,14 @@ class ARGPARSE:
         parser.add_argument("-nstruct", help="number of times a threaded structure should be relaxed", type=int, default=1)
         parser.add_argument("-mhcs", help="provide the list of names of MHCs in the file, if you want to include all, just type \'all\' in the file")
         parser.add_argument("-list_mhcs", help="List all the HLAs for which sequences are available in the database", action='store_true')
-        parser.add_argument("-beta2m", help="provide beta2m sequence", default="")
+        parser.add_argument("-beta2m", help="provide the name of beta2m for which the sequence is fetched from the database", default="none",
+                            choices=['humanbeta2m', 'mousebeta2m', 'chickenbeta2m', 'bovinebeta2m', 'ratbeta2m', 'none'])
+        parser.add_argument("-tcr", help="provide the name of tcr for which the sequence is fetched from the database", default="none")
+        parser.add_argument("-chaperone", help="provide the name of chaperone for which the sequence is fetched from the database", default="none")
         parser.add_argument("-mhc_chain", help="provide mhc chain id in the template")
         parser.add_argument("-no_trim_mhc", help="Should we model the whole complex", action='store_false')
         parser.add_argument("-peptide_chain", help="provide peptide chain id in the template")
-        parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, default=181)
+        parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, required=True)
 
         self.args = parser.parse_args()
 
@@ -81,8 +84,20 @@ class ARGPARSE:
         return self.args.idealize_relax
 
     def get_beta2m(self):
-
+        
+        if self.is_no_trim_mhc_flag_set():
+            return "none"
         return self.args.beta2m
+
+    def get_tcr(self):
+
+        return self.args.tcr
+
+    def get_chaperone(self):
+
+        if self.is_no_trim_mhc_flag_set():
+            return "none"
+        return self.args.chaperone
 
     def is_no_trim_mhc_flag_set(self):
 

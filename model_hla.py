@@ -21,6 +21,9 @@ from thread.pre_thread import PRE_THREADING
 
 from database.HLA_sequences_180 import hla_sequences_180
 from database.HLA_sequences_complex import hla_sequences
+from database.beta2m_sequences import beta2m_sequences
+from database.tcr_sequences import tcr_sequences
+from database.chaperone_sequences import chaperone_sequences
 
 # import other required libraries
 import os
@@ -34,18 +37,11 @@ class MODEL_HLA:
     peptide_sequences = []
     complex_headers = []
     complex_sequences = []
-    #beta2m = "MIQRTPKIQVYSRHPAENGKSNFLNCYVSGFHPSDIEVDLLKNGERIEKVEHSDLSFSKDWSFYLLYYTEFTPTEKDEYACRVNHVTLSQPKIVKWDRDM"
-    tcr = ""
     args = None
     mpi_install = True
 
     def __init__(self, args):
         self.args = args
-        if self.args.is_no_trim_mhc_flag_set():
-            self.tcr = ""
-        else:
-            self.tcr = "KEVEQNSGPLSVPEGAIASLNCTYSDRGSQSFFWYRQYSGKSPELIMFIYSNGDKEDGRFTAQLNKASQYVSLLIRDSQPSDSATYLCAVNFGGGKLIFGQGTELSVKPNIQNPDPAVYQLRDSKSSDKSVCLFTDFDSQTNVSQSKDSDVYITDKCVLDMRSMDFKSNSAVAWSNKSDFACANAFNNSIIPEDTFFPSIAGITQAPTSQILAAGRRMTLRCTQDMRHNAMYWYRQDLGLGLRLIHYSNTAGTTGKGEVPDGYSVSRANTDDFPLTLASAVPSQTSVYFCASSLSFGTEAFFGQGTRLTVVEDLNKVFPPEVAVFEPSEAEISHTQKATLVCLATGFYPDHVELSWWVNGKEVHSGVCTDPQPLKEQPALNDSRYALSSRLRVSATFWQDPRNHFRCQVQFYGLSENDEWTQDRAKPVTQIVSAEAWGRAD"
-
 
     def model_hlas_for_each_peptide(self):
 
@@ -107,10 +103,10 @@ class MODEL_HLA:
 
         if key == None:
             for key, value in datamap.items():
-                text = value+self.args.get_beta2m()+peptide_sequence+self.tcr
+                text = value+beta2m_sequences[self.args.get_beta2m()]+peptide_sequence+tcr_sequences[self.args.get_tcr()]+chaperone_sequences[self.args.get_chaperone()]
                 fasta_file_name.append(self.write_to_fasta(key, text, peptide_sequence))
         else:
-            text = datamap[key]+self.args.get_beta2m()+peptide_sequence+self.tcr
+            text = datamap[key]+beta2m_sequences[self.args.get_beta2m()]+peptide_sequence+tcr_sequences[self.args.get_tcr()]+chaperone_sequences[self.args.get_chaperone()]
             fasta_file_name.append(self.write_to_fasta(key, text, peptide_sequence))
 
         return fasta_file_name
