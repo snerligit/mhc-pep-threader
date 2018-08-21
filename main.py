@@ -29,7 +29,7 @@ def run():
             for key,value in hla_sequences.items():
                 print(key)
         else:
-            for key,value in hla_sequences.items():
+            for key,value in hla_sequences_180.items():
                 print(key)
     else:
         # Load Rosetta database files

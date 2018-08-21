@@ -17,7 +17,7 @@ from pyrosetta.rosetta.core.sequence import *
 # additional bio libraries
 
 #custom libraries
-from idealize_relax.movemap import MOVEMAP
+from thread.post_thread import POST_THREADING
 
 # import other required libraries
 import os
@@ -27,10 +27,12 @@ import sys
 class THREAD:
 
     pre_threader = None
+    cutpoint = 1
 
     def __init__(self, pre_thread):
 
         self.pre_threader = pre_thread
+        self.cutpoint = 180
 
     def apply(self):
 
@@ -43,15 +45,11 @@ class THREAD:
         for vec in alignment_vec:
             new_pose = pose_from_sequence(self.pre_threader.get_target_sequence(), "fa_standard")
             thread = PartialThreadingMover(vec, self.pre_threader.get_template().get_pose())
-            #fjd = MPI_FILE_BUF_JOB_DISTRIBUTOR(thread)
-            #fjd.apply()
 
             thread.apply(new_pose)
 
-            threaded = new_pose
+            threaded_pose = new_pose
             tag = self.pre_threader.get_target_file_name()
-            threaded.dump_pdb(tag+".pdb")
-            movemap = MOVEMAP(tag+".pdb", self.pre_threader.args.get_pep_start_index(),
-                                self.pre_threader.get_pep_length(), self.pre_threader.args.get_groove_distance(),
-                                tag+".movemap", True)
-            movemap.apply()
+
+            post = POST_THREADING(self.pre_threader, threaded_pose, tag, self.cutpoint)
+            post.treatment_post_homology_modeling()

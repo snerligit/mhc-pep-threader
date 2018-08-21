@@ -37,6 +37,7 @@ class MODEL_HLA:
     peptide_sequences = []
     complex_headers = []
     complex_sequences = []
+    template = None
     args = None
     mpi_install = True
 
@@ -60,32 +61,41 @@ class MODEL_HLA:
         try:
             from jd.job_distributor import JOB_DISTRIBUTOR
             job_dist = JOB_DISTRIBUTOR()
+            ''' #get this to work yet
+            template_name = job_dist.perform_single_operation(self.get_template)
+            if self.template == None and isinstance(template_name, str):
+                self.template = TEMPLATE(template_name).get_pose_from_pdb()
+                job_dist.apply(njobs, self.apply)
+            elif self.template != None:
+                job_dist.apply(njobs, self.apply)
+            '''
+            self.get_template()
             job_dist.apply(njobs, self.apply)
         except ImportError:
             self.mpi_install = False
 
         if not self.mpi_install:
+            self.get_template()
             for job_id in range(njobs):
                 self.apply(job_id)
                 job_id += 1
 
     def apply(self, i):
 
-        print ("In apply: ", i, " ", self.complex_headers[i])
         pre_thread = None
-        pre_thread = PRE_THREADING(self.get_template(), self.complex_sequences[i],
+        pre_thread = PRE_THREADING(self.template, self.complex_sequences[i],
                             self.complex_headers[i], self.args)
         threader = THREAD(pre_thread)
         threader.apply()
         #self.treatment_post_homology_modeling()
 
     def get_template(self):
-        template_ = TEMPLATE(self.args.get_template_pdb())
-        template_.treat_template_structure(self.args.get_mhc_chain(),
+        self.template = TEMPLATE(self.args.get_template_pdb())
+        self.template.treat_template_structure(self.args.get_mhc_chain(),
                                             self.args.get_peptide_chain(),
                                             self.args.is_no_trim_mhc_flag_set(),
                                             self.args.get_idealize_relax())
-        return template_
+        return self.template.get_pdb()
 
     def write_to_fasta(self, key, value, peptide_sequence):
         fasta_file_name = key+"_"+peptide_sequence+".fasta"

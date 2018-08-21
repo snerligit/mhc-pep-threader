@@ -49,6 +49,15 @@ class MOVEMAP:
         self.already_computed = already_computed
         self.pep_len = pep_length
 
+    def get_filename(self):
+
+        return self.filename
+
+    def get_rosetta_object(self):
+        movemap = MoveMap()
+        movemap.init_from_file(self.filename)
+        return movemap
+
     def apply(self):
         self.protein_residues = []
         self.peptide_residues = []

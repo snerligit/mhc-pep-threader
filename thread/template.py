@@ -23,7 +23,7 @@ from idealize_relax.relax import RELAX
 class TEMPLATE:
 
     template_pdb = None
-    templare_pose = None
+    template_pose = None
 
     def __init__(self, pdb):
         self.template_pdb = pdb
@@ -36,6 +36,11 @@ class TEMPLATE:
 
     def get_pdb(self):
         return self.template_pdb
+
+    def get_pose_from_pdb(self):
+        if self.template_pose == None:
+            self.template_pose = pose_from_pdb(self.template_pdb)
+        return self.template_pose
 
     def get_name(self):
         template_pdb_fields = self.template_pdb.split(".")
@@ -65,6 +70,9 @@ class TEMPLATE:
         self.append_cropped_pdb()
         io.save(self.template_pdb, ResSelect())
 
+    def save_pdb(self):
+        self.template_pose.dump_pdb(self.template_pdb)
+
     def append_clean_pdb(self):
         template_pdb_name = self.get_name()
         self.template_pdb = template_pdb_name + ".clean.pdb"
@@ -84,3 +92,4 @@ class TEMPLATE:
             template_pose = self.template_pose
             self.template_pose = IDEALIZE().idealize_pdb(template_pose)
             self.template_pose = RELAX().relax_pdb(template_pose)
+        self.save_pdb()

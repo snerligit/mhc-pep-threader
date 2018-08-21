@@ -9,19 +9,13 @@
 # Load the Rosetta commands for use in the Python shell
 from pyrosetta import *
 
-# import rosetta files
-from pyrosetta.rosetta.protocols.comparative_modeling import *
-from pyrosetta.rosetta.core.scoring import *
-from pyrosetta.rosetta.core.sequence import *
-
 # additional bio libraries
 
 #custom libraries
 from idealize_relax.relax import RELAX
-from thread.template import TEMPLATE
-from thread.fasta import FASTA
-from alignment.align import ALIGN
-from alignment.grishin import GRISHIN
+from idealize_relax.movemap import MOVEMAP
+from ia.chain_split import CHAIN_SPLIT
+from ia.interface_analyzer import INTERFACE
 
 # import other required libraries
 import os
@@ -30,37 +24,62 @@ import sys
 class POST_THREADING:
 
     args = None
+    threaded_pose = None
+    tag = ""
+    pre_threader = None
+    movemap = None
+    cutpoint = 1
+    mpi_install = True
 
-    def __init__(self, args):
+    def __init__(self, pre_threader, threaded_pose, tag, cutpoint):
 
-        self.args = args
+        self.args = pre_threader.args
+        self.pre_threader = pre_threader
+        self.threaded_pose = threaded_pose
+        self.tag = tag
+        self.cutpoint = cutpoint
 
-'''
+    def minimize_and_calculate_energy(self, i):
+
+        relax = RELAX()
+        threaded_pose = Pose()
+        threaded_pose.detached_copy(self.threaded_pose)
+        relaxed_threaded_pose = Pose()
+        relaxed_threaded_pose = relax.relax_pdb_with_movemap(threaded_pose, self.movemap.get_rosetta_object())
+
+        relaxed_threaded_pose.dump_pdb(self.tag+"_relaxed_"+str(i)+".pdb")
+
+        chain_split = CHAIN_SPLIT(relaxed_threaded_pose, self.cutpoint)
+        chain_split.cut()
+        split_pose = Pose()
+        split_pose = chain_split.get_pose()
+
+        ia = INTERFACE(split_pose)
+        ia.analyze()
+        print("Interface energy: ", ia.get_dG())
+
     def treatment_post_homology_modeling(self):
 
-        threaded_pdb_name = self.template.get_template_path()+self.target_file_name+".pdb"
-        self.threaded.dump_pdb(threaded_pdb_name)
+        self.threaded_pose.dump_pdb(self.tag+".pdb")
+        self.movemap = MOVEMAP(self.tag+".pdb", self.args.get_pep_start_index(),
+                            self.pre_threader.get_pep_length(), self.args.get_groove_distance(),
+                            self.tag+".movemap", True)
+        self.movemap.apply()
 
-        pep_start_index = find_pep_start_index()
-        if self.movemap == None:
-            movemap = MOVEMAP(threaded_pdb_name, self.pep_start_index, self.groove_distance, self.target_file_name+".movemap")
-        else:
-            movemap = MOVEMAP(threaded_pdb_name, self.pep_start_index, self.groove_distance, self.movemap, True)
-        movemap_rosetta_obj = movemap.get_movemap()
+        relaxed_pose = self.threaded_pose
 
-        job_dist = JOB_DISTRIBUTOR(self.target_file_name, self.nstruct)
+        ''' # yet to make this work
+        try:
+            from jd.job_distributor import JOB_DISTRIBUTOR
+            job_dist = JOB_DISTRIBUTOR()
+            print ("No. of jobs for relax: ", self.args.get_nstruct())
+            job_dist.apply(self.args.get_nstruct(), self.minimize_and_calculate_energy)
+        except ImportError:
+            self.mpi_install = False
+        '''
 
-        relaxed_pose = self.threaded
-        job_dist.get_dist_obj().native_pose = self.template.get_pose()
-
-        while not job_dist.get_dist_obj().job_complete:
-            relaxed_threaded_pose = RELAX(relaxed_pose)
-            relaxed_threaded_pose.relax_pdb_with_movemap(movemap_rosetta_obj)
-            job_dist.get_dist_obj().output_decoy(relaxed_pose)
-
-            ia = INTERFACE(relaxed_pose)
-            ia.analyze()
-            print("Interface energy: ", ia.get_dG())
-
-            relaxed_pose.assign(self.threaded)
-'''
+        self.mpi_install = False
+        if not self.mpi_install:
+            for job_id in range(self.args.get_nstruct()):
+                self.minimize_and_calculate_energy(job_id)
+                job_id += 1
