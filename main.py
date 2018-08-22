@@ -11,7 +11,7 @@
 from pyrosetta import *
 
 #custom libraries
-from model_hla import MODEL_HLA
+from model import MODEL
 from input_output.input.argparser import ARGPARSE
 from database.HLA_sequences_180 import hla_sequences_180
 from database.HLA_sequences_complex import hla_sequences
@@ -34,8 +34,8 @@ def run():
     else:
         # Load Rosetta database files
         init()
-        modeller = MODEL_HLA(args)
-        modeller.model_hlas_for_each_peptide()
+        modeller = MODEL(args)
+        modeller.model_mhc_for_each_peptide_beta2m_tcr_chaperone()
 
 
 if __name__ == "__main__":

@@ -45,14 +45,11 @@ class PRE_THREADING:
         self.complex_sequence = complex_sequence
         self.complex_header = complex_header
         self.args = args
-        self.pep_length = len(list(self.complex_header.split("_")[1]))
+        self.pep_length = len(list(self.complex_header.split("_")[2]))
         self.align_template_target_sequences()
 
     def get_target_file_name(self):
-            fields = self.complex_header.split("_")
-            mhc_header = fields[0]
-            peptide_header = fields[1]
-            return mhc_header+"_on_"+self.template.get_stripped_name()+"_with_"+peptide_header
+            return self.complex_header+"_on_"+self.template.get_stripped_name()
 
     def get_target_sequence(self):
 

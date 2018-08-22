@@ -64,20 +64,22 @@ class POST_THREADING:
                             self.tag+".movemap", True)
         self.movemap.apply()
 
-        relaxed_pose = self.threaded_pose
+        if self.args.get_relax_after_threading():
 
-        ''' # yet to make this work
-        try:
-            from jd.job_distributor import JOB_DISTRIBUTOR
-            job_dist = JOB_DISTRIBUTOR()
-            print ("No. of jobs for relax: ", self.args.get_nstruct())
-            job_dist.apply(self.args.get_nstruct(), self.minimize_and_calculate_energy)
-        except ImportError:
+            relaxed_pose = self.threaded_pose
+
+            ''' # yet to make this work
+            try:
+                from jd.job_distributor import JOB_DISTRIBUTOR
+                job_dist = JOB_DISTRIBUTOR()
+                print ("No. of jobs for relax: ", self.args.get_nstruct())
+                job_dist.apply(self.args.get_nstruct(), self.minimize_and_calculate_energy)
+            except ImportError:
+                self.mpi_install = False
+            '''
+
             self.mpi_install = False
-        '''
-
-        self.mpi_install = False
-        if not self.mpi_install:
-            for job_id in range(self.args.get_nstruct()):
-                self.minimize_and_calculate_energy(job_id)
-                job_id += 1
+            if not self.mpi_install:
+                for job_id in range(self.args.get_nstruct()):
+                    self.minimize_and_calculate_energy(job_id)
+                    job_id += 1

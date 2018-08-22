@@ -28,13 +28,13 @@ class ARGPARSE:
         parser.add_argument("-groove_distance", help="provide distance to select nearest groove residues from the peptide", type=float, default=3.5)
         parser.add_argument("-mhc_trim_length", help="provide the number of residue from which the mhc should be trimmed", type=int, default=181)
         parser.add_argument("-idealize_relax", help="idealize and relax template structure before threading", action='store_true')
+        parser.add_argument("-relax_after_threading", help="idealize and relax template structure before threading", action='store_true')
         parser.add_argument("-nstruct", help="number of times a threaded structure should be relaxed", type=int, default=1)
         parser.add_argument("-mhcs", help="provide the list of names of MHCs in the file, if you want to include all, just type \'all\' in the file")
         parser.add_argument("-list_mhcs", help="List all the HLAs for which sequences are available in the database", action='store_true')
-        parser.add_argument("-beta2m", help="provide the name of beta2m for which the sequence is fetched from the database", default="none",
-                            choices=['humanbeta2m', 'mousebeta2m', 'chickenbeta2m', 'bovinebeta2m', 'ratbeta2m', 'none'])
-        parser.add_argument("-tcr", help="provide the name of tcr for which the sequence is fetched from the database", default="none")
-        parser.add_argument("-chaperone", help="provide the name of chaperone for which the sequence is fetched from the database", default="none")
+        parser.add_argument("-beta2m", help="provide the file containing names of beta2m, Choices include: choices=[humanbeta2m, mousebeta2m, chickenbeta2m, bovinebeta2m, ratbeta2m, none]")
+        parser.add_argument("-tcr", help="provide the file containing tcr sequence in fasta format")
+        parser.add_argument("-chaperone", help="provide the file containing names of chaperones, Choices include: choices=[tapasin, tapbpr, none]")
         parser.add_argument("-mhc_chain", help="provide mhc chain id in the template")
         parser.add_argument("-no_trim_mhc", help="Should we model the whole complex", action='store_false')
         parser.add_argument("-peptide_chain", help="provide peptide chain id in the template")
@@ -93,10 +93,14 @@ class ARGPARSE:
 
         return self.args.idealize_relax
 
+    def get_relax_after_threading(self):
+
+        return self.args.relax_after_threading
+
     def get_beta2m(self):
 
         if self.is_no_trim_mhc_flag_set():
-            return "none"
+            return None
         return self.args.beta2m
 
     def get_tcr(self):
@@ -106,7 +110,7 @@ class ARGPARSE:
     def get_chaperone(self):
 
         if self.is_no_trim_mhc_flag_set():
-            return "none"
+            return None
         return self.args.chaperone
 
     def is_no_trim_mhc_flag_set(self):
