@@ -31,7 +31,7 @@ class MOVEMAP:
 
     structure = None
     pep_start_index = None
-    pep_len = 9
+    pep_len = -1
     groove_distance = 3.5
     filename = ""
     already_computed = False

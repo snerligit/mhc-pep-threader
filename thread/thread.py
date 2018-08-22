@@ -32,7 +32,6 @@ class THREAD:
     def __init__(self, pre_thread):
 
         self.pre_threader = pre_thread
-        self.cutpoint = 180
 
     def apply(self):
 
@@ -51,5 +50,5 @@ class THREAD:
             threaded_pose = new_pose
             tag = self.pre_threader.get_target_file_name()
 
-            post = POST_THREADING(self.pre_threader, threaded_pose, tag, self.cutpoint)
+            post = POST_THREADING(self.pre_threader, threaded_pose, tag)
             post.treatment_post_homology_modeling()

@@ -26,6 +26,7 @@ class ARGPARSE:
         parser.add_argument("-peptides", help="provide fasta file with peptide sequences that need to be threaded")
         parser.add_argument("-movemap", help="provide a movemap file for relaxing the target")
         parser.add_argument("-groove_distance", help="provide distance to select nearest groove residues from the peptide", type=float, default=3.5)
+        parser.add_argument("-mhc_trim_length", help="provide the number of residue from which the mhc should be trimmed", type=int, default=181)
         parser.add_argument("-idealize_relax", help="idealize and relax template structure before threading", action='store_true')
         parser.add_argument("-nstruct", help="number of times a threaded structure should be relaxed", type=int, default=1)
         parser.add_argument("-mhcs", help="provide the list of names of MHCs in the file, if you want to include all, just type \'all\' in the file")
@@ -38,6 +39,7 @@ class ARGPARSE:
         parser.add_argument("-no_trim_mhc", help="Should we model the whole complex", action='store_false')
         parser.add_argument("-peptide_chain", help="provide peptide chain id in the template")
         parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, required=True)
+        parser.add_argument("-interface_cutpoint", help="last residue index that separates the interfaces for which you are calculating binding energies", type=int, required=True)
 
         self.args = parser.parse_args()
 
@@ -58,6 +60,14 @@ class ARGPARSE:
     def is_list_mhcs(self):
 
         return self.args.list_mhcs
+
+    def get_interface_cupoint(self):
+
+        return self.args.cutpoint
+
+    def get_mhc_trim_length(self):
+
+        return self.args.mhc_trim_length
 
     def get_mhcs(self):
 
@@ -84,7 +94,7 @@ class ARGPARSE:
         return self.args.idealize_relax
 
     def get_beta2m(self):
-        
+
         if self.is_no_trim_mhc_flag_set():
             return "none"
         return self.args.beta2m

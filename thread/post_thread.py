@@ -28,16 +28,14 @@ class POST_THREADING:
     tag = ""
     pre_threader = None
     movemap = None
-    cutpoint = 1
     mpi_install = True
 
-    def __init__(self, pre_threader, threaded_pose, tag, cutpoint):
+    def __init__(self, pre_threader, threaded_pose, tag):
 
         self.args = pre_threader.args
         self.pre_threader = pre_threader
         self.threaded_pose = threaded_pose
         self.tag = tag
-        self.cutpoint = cutpoint
 
     def minimize_and_calculate_energy(self, i):
 
@@ -49,7 +47,7 @@ class POST_THREADING:
 
         relaxed_threaded_pose.dump_pdb(self.tag+"_relaxed_"+str(i)+".pdb")
 
-        chain_split = CHAIN_SPLIT(relaxed_threaded_pose, self.cutpoint)
+        chain_split = CHAIN_SPLIT(relaxed_threaded_pose, self.args.get_interface_cupoint())
         chain_split.cut()
         split_pose = Pose()
         split_pose = chain_split.get_pose()

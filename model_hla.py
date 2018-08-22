@@ -94,6 +94,7 @@ class MODEL_HLA:
         self.template.treat_template_structure(self.args.get_mhc_chain(),
                                             self.args.get_peptide_chain(),
                                             self.args.is_no_trim_mhc_flag_set(),
+                                            self.args.get_mhc_trim_length(),
                                             self.args.get_idealize_relax())
         return self.template.get_pdb()
 

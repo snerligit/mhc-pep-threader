@@ -54,12 +54,12 @@ class TEMPLATE:
     def get_template_path(self):
         return os.path.abspath(os.path.dirname(self.template_pdb))+"/"
 
-    def trim_pdb(self, mhc_chain, peptide_chain):
+    def trim_pdb(self, mhc_chain, peptide_chain, mhc_trim_length):
         p = PDBParser()
         s = p.get_structure('X', self.template_pdb)
         class ResSelect(Select):
             def accept_residue(self, res):
-                if res.id[1] >= 181 and res.parent.id == mhc_chain:
+                if res.id[1] >= mhc_trim_length and res.parent.id == mhc_chain:
                     return False
                 if res.parent.id != mhc_chain and res.parent.id != peptide_chain:
                     return False
@@ -81,12 +81,12 @@ class TEMPLATE:
         template_pdb_name = self.get_name()
         self.template_pdb = template_pdb_name + ".cropped.pdb"
 
-    def treat_template_structure(self, mhc_chain, peptide_chain, trim_mhc, idealize_relax = False):
+    def treat_template_structure(self, mhc_chain, peptide_chain, trim_mhc, mhc_trim_length, idealize_relax = False):
 
         cleanATOM(self.template_pdb)
         self.append_clean_pdb()
         if trim_mhc:
-            self.trim_pdb(mhc_chain, peptide_chain)
+            self.trim_pdb(mhc_chain, peptide_chain, mhc_trim_length)
         self.template_pose = pose_from_pdb(self.template_pdb)
         if idealize_relax == True:
             template_pose = self.template_pose
