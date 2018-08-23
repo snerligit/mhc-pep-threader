@@ -9,6 +9,7 @@
 # Load mpi4py library
 from mpi4py import MPI
 import pickle
+from pyrosetta import *
 
 class JOB_DISTRIBUTOR:
 
@@ -59,42 +60,41 @@ class JOB_DISTRIBUTOR:
             print ("Reached here. Return value is: ", ret_value)
             return ret_value
 
-
-    def apply(self, njobs, fun):
+    def MPIJobDistributor(self, njobs, fun):
 
         print ("No. of jobs received: ", njobs )
 
-        '''
         myjobs = []
 
-        if rank == 0:
+        if self.rank == 0:
             jobs = list(range(njobs))
-            jobs.extend( [None]*(size - njobs % size) )
-            n = len(jobs)/size
-            print ("Size of n: ", n, " and jobs: ", len(jobs) )
-            for i in range(size):
+            jobs.extend( [None]*(self.size - njobs % self.size) )
+            n = len(jobs)/self.size
+            for i in range(self.size):
                 queue = []  # list of jobs for individual cpu
                 for j in range(int(n)):
-                    print ("math: ", j*size+i)
-                    queue.append(jobs[j*size+i])
+                    queue.append(jobs[j*self.size+i])
 
                 if( i == 0 ):
                     myjobs = queue
                 else:
                     # now sending the queue to the process
-                    logger.info('Sending %s to node %s' % (queue, i) )
-                    comm.send(queue, dest=i)
+                    print ('Sending %s to node %s' % (queue, i) )
+                    self.comm.send(queue, dest=i)
         else:
             # getting decoy lists
-            myjobs = comm.recv(source=0)
+            myjobs = self.comm.recv(source=0)
 
-        print('Node %s, got queue:%s' % (rank, myjobs) )
+        print('Node %s, got queue:%s' % (self.rank, myjobs) )
 
         for j in myjobs:
-            if j is not None and j < njobs:
-                print (" the value of j is: ", j)
+            if j is not None:
                 fun(j)
-        '''
+
+
+    def SimpleMPIJobDistributor(self, njobs, fun):
+
+        print ("No. of jobs received: ", njobs )
         for i in range(njobs):
             if i%self.size != self.rank: continue
             print ("Performing task ", i, " now in rank: ", self.rank )

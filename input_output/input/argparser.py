@@ -57,7 +57,7 @@ class ARGPARSE:
 
     def get_interface_cupoint(self):
 
-        return self.args.cutpoint
+        return self.args.interface_cutpoint
 
     def get_mhc_trim_length(self):
 

@@ -72,7 +72,8 @@ class MODEL:
                 job_dist.apply(njobs, self.apply)
             '''
             self.get_template()
-            job_dist.apply(njobs, self.apply)
+            #job_dist.SimpleMPIJobDistributor(njobs, self.apply)
+            job_dist.MPIJobDistributor(njobs, self.apply)
         except ImportError:
             self.mpi_install = False
 
