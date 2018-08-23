@@ -16,7 +16,6 @@ from idealize_relax.relax import RELAX
 from idealize_relax.movemap import MOVEMAP
 from ia.chain_split import CHAIN_SPLIT
 from ia.interface_analyzer import INTERFACE
-from jd.job_distributor import JOB_DISTRIBUTOR
 
 # import other required libraries
 import os
@@ -38,6 +37,32 @@ class POST_THREADING:
         self.threaded_pose = threaded_pose
         self.tag = tag
 
+    def treatment_post_homology_modeling(self):
+
+        self.threaded_pose.dump_pdb(self.tag+".pdb")
+        self.movemap = MOVEMAP(self.tag+".pdb", self.args.get_pep_start_index(),
+                            self.pre_threader.get_pep_length(), self.args.get_groove_distance(),
+                            self.tag+".movemap", True)
+        self.movemap.apply()
+
+        if self.args.get_relax_after_threading():
+
+            relaxed_pose = self.threaded_pose
+
+            # yet to make this work
+            try:
+                from jd.job_distributor import JOB_DISTRIBUTOR
+                job_dist = JOB_DISTRIBUTOR()
+                print ("No. of jobs for relax: ", self.args.get_nstruct())
+                job_dist.SimpleMPIJobDistributor(self.args.get_nstruct(), self.minimize_and_calculate_energy)
+            except ImportError:
+                self.mpi_install = False
+
+            #self.mpi_install = False
+            if not self.mpi_install:
+                for job_id in range(self.args.get_nstruct()):
+                    self.minimize_and_calculate_energy(job_id)
+
     def minimize_and_calculate_energy(self, i):
 
         relax = RELAX()
@@ -56,30 +81,3 @@ class POST_THREADING:
         ia = INTERFACE(split_pose)
         ia.analyze()
         print("Interface energy: ", ia.get_dG())
-
-    def treatment_post_homology_modeling(self):
-
-        self.threaded_pose.dump_pdb(self.tag+".pdb")
-        self.movemap = MOVEMAP(self.tag+".pdb", self.args.get_pep_start_index(),
-                            self.pre_threader.get_pep_length(), self.args.get_groove_distance(),
-                            self.tag+".movemap", True)
-        self.movemap.apply()
-
-        if self.args.get_relax_after_threading():
-
-            relaxed_pose = self.threaded_pose
-
-            ''' # yet to make this work
-            try:
-                from jd.job_distributor import JOB_DISTRIBUTOR
-                job_dist = JOB_DISTRIBUTOR()
-                print ("No. of jobs for relax: ", self.args.get_nstruct())
-                job_dist.apply(self.args.get_nstruct(), self.minimize_and_calculate_energy)
-            except ImportError:
-                self.mpi_install = False
-            '''
-
-            self.mpi_install = False
-            if not self.mpi_install:
-                for job_id in range(self.args.get_nstruct()):
-                    self.minimize_and_calculate_energy(job_id)

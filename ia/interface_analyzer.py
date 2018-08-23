@@ -16,6 +16,7 @@ class INTERFACE:
     ia = None
 
     def __init__(self, pose):
+        self.ia = None
         self.pose = pose
 
     def analyze(self):

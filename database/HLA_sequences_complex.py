@@ -1,3 +1,18 @@
+#!/usr/bin/python
+
+#       Sgourakis Lab
+#   Author: Santrupti Nerli
+#   Edited by: Andrew C. McShan
+#   Date: December 20, 2018
+#   Email: snerli@ucsc.edu
+#
+
+'''
+
+A dictionary of supported MHC sequences of length 276 amino acids long (considered complete)
+
+'''
+# import required libraries
 from collections import defaultdict
 
 hla_sequences = defaultdict(dict)

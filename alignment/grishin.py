@@ -6,7 +6,12 @@
 #   Email: snerli@ucsc.edu
 #
 
-# additional bio libraries
+'''
+
+GRISHIN class contains all the necessary functionalities required to create
+Rosetta specific alignment file.
+
+'''
 
 # import other required libraries
 import os
@@ -15,22 +20,24 @@ import subprocess
 
 class GRISHIN:
 
-    filename = ""
-    target_head = ""
-    template_head = ""
-    target_string = ""
-    template_string = ""
+    # class members
+    filename = "" # grishin file name
+    target_head = "" # target name
+    template_head = "" # template name
+    target_sequence = "" # target sequence
+    template_sequence = "" # template sequence
 
-    def __init__(self, filename, target_head, template_head, target_string, template_string):
+    # constructor
+    def __init__(self, filename, target_head, template_head, target_sequence, template_sequence):
         self.filename = filename
         self.target_head = target_head
         self.template_head = template_head
-        self.target_string = target_string
-        self.template_string = template_string
+        self.target_sequence = target_sequence
+        self.template_sequence = template_sequence
 
-    def get_file_name(self):
-        return self.filename+".grishin"
-
+    # method to create and write to the grishin file
+    # the formatting is very specific to Rosetta
+    # See the link: https://www.rosettacommons.org/docs/latest/rosetta_basics/file_types/Grishan-format-alignment
     def write(self, is_new = False):
         if is_new:
             writefile = open(self.get_file_name(), "w")
@@ -38,7 +45,11 @@ class GRISHIN:
             writefile = open(self.get_file_name(), "a")
         writefile.write("## "+self.target_head+" "+self.template_head+"\n"+"#"+"\n")
         writefile.write("scores_from_program: 0\n")
-        writefile.write("0 "+self.target_string+"\n")
-        writefile.write("0 "+self.template_string+"\n")
+        writefile.write("0 "+self.target_sequence+"\n")
+        writefile.write("0 "+self.template_sequence+"\n")
         writefile.write("--\n")
         writefile.close()
+
+    # getter method
+    def get_file_name(self):
+        return self.filename+".grishin"

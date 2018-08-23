@@ -6,8 +6,16 @@
 #   Email: snerli@ucsc.edu
 #
 
-# additional bio libraries
+'''
 
+ALIGN class contains all the necessary functionalities required to perform sequence
+alignment between the template and the target sequences.
+
+'''
+
+# additional bio libraries
+# Refernce: Fast, scalable generation of high-quality protein multiple sequence alignments using Clustal Omega. 
+# (2011 October 11) Molecular systems biology 7 :539
 from Bio.Align.Applications import ClustalOmegaCommandline
 
 #custom libraries
@@ -20,56 +28,39 @@ import subprocess
 
 class ALIGN:
 
-    aln = None
-    template_seq = None
-    target_seq = None
-    matrix_type = 62
-    clustal_input = ""
-    clustal_output = ""
-    input_fasta = False
+    # class members
+    template_seq = None # amino acid sequence for a given template
+    target_seq = None # amino acid sequence for the required target
+    matrix_type = 62 # matrix type to use for scoring alignment
+    clustal_input = "" # input filename for clustal omega
+    clustal_output = "" # output filename for clustal omega
 
-    def __init__(self, template_seq, target_seq, input_fasta = None, matrix_type = 62):
+    # constructor
+    def __init__(self, template_seq, target_seq, matrix_type = 62):
         self.template_seq = template_seq
         self.matrix_type = matrix_type
-        if input_fasta == None and target_seq != None:
-            self.target_seq = target_seq
-            self.clustal_input = "clustal_default_input.fasta"
-        else:
-            self.clustal_input = input_fasta
-            self.input_fasta = True
+        self.target_seq = target_seq
+        self.clustal_input = "clustal_default_input.fasta"
         self.clustal_output = self.clustal_input+"_clustal_output.fasta"
 
-    def get_clustal_output_filename(self):
-        return self.clustal_output
-
-    def check_if_template_exists(self):
-        if self.input_fasta == True:
-            readfilehandle = open(self.clustal_input, "r")
-            for line in readfilehandle:
-                line = line.rstrip()
-                if ">template" in line:
-                    return True
-            readfilehandle.close()
-
+    # method to create clustal input file
     def init_clustal_input(self):
-        if self.input_fasta == False:
-            writefilehandle = open(self.clustal_input, "w")
-            writefilehandle.write(">template\n")
-            writefilehandle.write(self.template_seq+"\n")
-            writefilehandle.write(">target\n")
-            writefilehandle.write(self.target_seq+"\n")
-            writefilehandle.close()
-        else:
-            if not self.check_if_template_exists():
-                writefilehandle = open(self.clustal_input, "a")
-                writefilehandle.write(">template\n")
-                writefilehandle.write(self.template_seq+"\n")
-                writefilehandle.close()
+        writefilehandle = open(self.clustal_input, "w")
+        writefilehandle.write(">template\n")
+        writefilehandle.write(self.template_seq+"\n")
+        writefilehandle.write(">target\n")
+        writefilehandle.write(self.target_seq+"\n")
+        writefilehandle.close()
 
-
+    # method that calls externally installed clustal program
+    # read the input sequences from clustal input file and write to the
+    # clustal output file
     def clustal(self):
         self.init_clustal_input()
         cline = ClustalOmegaCommandline(infile=self.clustal_input, outfile=self.clustal_output, distmat_full=True,
                                         verbose=True, seqtype="Protein", outfmt="vienna", iterations=10, percentid=True, force=True)
         cline()
-        #self.read_aln()
+
+    # getter method
+    def get_clustal_output_filename(self):
+        return self.clustal_output

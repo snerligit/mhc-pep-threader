@@ -1,3 +1,18 @@
+#!/usr/bin/python
+
+#       Sgourakis Lab
+#   Author: Andrew C. McShan
+#   Edited by: Santrupti Nerli
+#   Date: June 20, 2018
+#   Email: snerli@ucsc.edu
+#
+
+'''
+
+A dictionary of supported beta2m sequences
+
+'''
+# import required libraries
 from collections import defaultdict
 
 beta2m_sequences = defaultdict(dict)
