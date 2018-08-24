@@ -97,6 +97,6 @@ class JOB_DISTRIBUTOR:
         print ("No. of jobs received: ", njobs )
         print ("I am in rank: ", self.rank )
         for i in range(njobs):
-            if i%self.size != self.rank: continue
+            #if i%self.size != self.rank: continue
             print ("Performing task ", i, " now in rank: ", self.rank )
             fun(i)

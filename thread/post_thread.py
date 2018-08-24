@@ -70,7 +70,7 @@ class POST_THREADING:
         threaded_pose.detached_copy(self.threaded_pose)
 
         relaxed_threaded_pose = Pose()
-        relaxed_threaded_pose = relax.relax_pdb_with_movemap(threaded_pose, self.movemap.get_rosetta_object())
+        relaxed_threaded_pose = relax.relax_pdb_with_movemap(threaded_pose, self.movemap.get_movemap())
         relaxed_threaded_pose.dump_pdb(self.tag+"_relaxed_"+str(i)+".pdb")
 
         chain_split = CHAIN_SPLIT(relaxed_threaded_pose, self.args.get_interface_cupoint())

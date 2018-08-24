@@ -6,14 +6,6 @@
 #   Email: snerli@ucsc.edu
 #
 
-# import other required libraries
-import os
-import sys
-import math
-import numpy
-import argparse
-import subprocess
-
 # import biopython libraries
 #
 # Hamelryck, T., Manderick, B. (2003) PDB parser and structure class implemented in Python. Bioinformatics 19: 2308-2310

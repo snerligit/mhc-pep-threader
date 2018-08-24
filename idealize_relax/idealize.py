@@ -6,16 +6,22 @@
 #   Email: snerli@ucsc.edu
 #
 
+'''
+
+IDEALIZE class contains all the necessary functionalities required to idealize
+an input pose.
+
+'''
+
 # Load the Rosetta commands for use in the Python shell
 from pyrosetta import *
 
 # import rosetta files
 from pyrosetta.rosetta.protocols.idealize import *
-from pyrosetta.rosetta.core.scoring import *
-
 
 class IDEALIZE:
 
+    # method to apply IdealizeMover for a given pose
     def idealize_pdb(self, pose):
         ideal = IdealizeMover()
         ideal.apply(pose)
