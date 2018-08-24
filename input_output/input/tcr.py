@@ -6,20 +6,28 @@
 #   Email: snerli@ucsc.edu
 #
 
-# Load the Rosetta commands for use in the Python shell
+'''
+
+TCR class contains all the necessary functionalities required to fetch
+necessary tcr sequences and their respective headers.
+
+'''
 
 from thread.fasta import FASTA
 
 class TCR:
 
-    filename = ""
-    tcr_object = None
+    # class members
+    filename = "" # input file name containing tcr sequences in fasta format
+    tcr_object = None # tcr object of FASTA type
 
+    # constructor
     def __init__(self, filename):
         self.filename = filename
         self.tcr_object = FASTA(self.filename)
         self.tcr_object.read()
 
+    # getter methods
     def get_headers(self):
         return self.tcr_object.get_headers()
 

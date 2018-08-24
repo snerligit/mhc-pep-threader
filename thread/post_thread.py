@@ -16,6 +16,7 @@ from idealize_relax.relax import RELAX
 from idealize_relax.movemap import MOVEMAP
 from ia.chain_split import CHAIN_SPLIT
 from ia.interface_analyzer import INTERFACE
+from input_output.output.output_interface_energies import OUT_INTERFACE_ENERGY
 
 # import other required libraries
 import os
@@ -29,6 +30,7 @@ class POST_THREADING:
     pre_threader = None
     movemap = None
     mpi_install = True
+    output_energies = None
 
     def __init__(self, pre_threader, threaded_pose, tag):
 
@@ -36,13 +38,14 @@ class POST_THREADING:
         self.pre_threader = pre_threader
         self.threaded_pose = threaded_pose
         self.tag = tag
+        self.output_energies = OUT_INTERFACE_ENERGY(self.args.get_out_file())
 
     def treatment_post_homology_modeling(self):
 
         self.threaded_pose.dump_pdb(self.tag+".pdb")
         self.movemap = MOVEMAP(self.tag+".pdb", self.args.get_pep_start_index(),
                             self.pre_threader.get_pep_length(), self.args.get_groove_distance(),
-                            self.tag+".movemap", True)
+                            self.tag+".movemap")
         self.movemap.apply()
 
         if self.args.get_relax_after_threading():
@@ -62,6 +65,7 @@ class POST_THREADING:
             if not self.mpi_install:
                 for job_id in range(self.args.get_nstruct()):
                     self.minimize_and_calculate_energy(job_id)
+            self.output_energies.write()
 
     def minimize_and_calculate_energy(self, i):
 
@@ -81,3 +85,4 @@ class POST_THREADING:
         ia = INTERFACE(split_pose)
         ia.analyze()
         print("Interface energy: ", ia.get_dG())
+        self.output_energies.add(self.tag, ia.get_dG())
