@@ -55,7 +55,7 @@ class ARGPARSE:
     # check if a more extensive check is required
     def check_user_input(self):
         if self.is_list_mhcs() == False:
-            if self.get_mhcs() == None or self.get_template_pdb() == None or self.get_peptides() == None:
+            if self.get_mhcs() == None or self.get_template_pdb() == None:
                 print("Please provide mhc list, peptide list and template_pdb to perform threading\n Type -h to see all the options")
                 exit(1)
 
