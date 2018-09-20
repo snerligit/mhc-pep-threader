@@ -53,13 +53,18 @@ class MODEL:
         chaperones = CHAPERONE(self.args.get_chaperone())
         tcr = TCR(self.args.get_tcr())
 
-        if ( len(peptides.get_headers()) > 0 ):
+        if ( len(peptides.get_headers()) > 1 ):
             if ( self.args.get_pep_start_index() == 0 ):
                 print ("Please provide peptide start index. Option: -pep_start_index")
                 exit(1)
             if ( self.args.get_interface_cupoint() == 0 ):
                 print ("Please provide interface cutpoint. Option: -interface_cutpoint")
                 exit(1)
+        elif ( len(peptides.get_headers()) == 1 ):
+            for pep_header in peptides.get_headers():
+                if ( pep_header is not "none" ):
+                    print ("Please provide peptide start index. Option: -pep_start_index")
+                    exit(1)
 
         # get all combinations of sequences
         # mhcs, beta2ms, peptides, tcrs and chaperones
