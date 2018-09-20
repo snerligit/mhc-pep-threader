@@ -6,46 +6,58 @@
 #   Email: snerli@ucsc.edu
 #
 
-# Load mpi4py library
+'''
+
+JOB_DISTRIBUTOR class contains all the necessary functionalities required
+parallelize RosettaMHC method using MPI (message passing interface).
+
+'''
+
+# Load the Rosetta commands for use in the Python shell
+from pyrosetta import *
+
+# import required libraries
 from mpi4py import MPI
 import pickle
-from pyrosetta import *
 
 class JOB_DISTRIBUTOR:
 
-    rank = -1
-    comm = None
-    size = -1
-    done = False
+    # class members
+    rank = -1 # processor number
+    comm = None # MPI communicator object
+    size = -1 # number of process selected during mpi execution (ex. mpiexec -np 3 implies size = 3)
+    done = False # this parameter is used as a flag for executing a function by a single processor only
 
+    # constructor
     def __init__(self):
-
         self.comm = MPI.COMM_WORLD
         self.rank = self.comm.Get_rank()
         self.size = self.comm.Get_size()
 
-    def get_communicator(self):
+    # method to sync all the processors
+    def sync(self):
+        self.comm.barrier()
 
+    # method to broadcast data from 0th process to other processes
+    def broadcast(self, data):
+        return self.comm.bcast(data, root = 0)
+
+    # set the done parameter and broadcast to other processes that
+    # the task is done
+    def set_all_dones(self):
+        self.done = self.comm.bcast(self.done, root = 0)
+
+    # getter methods
+    def get_communicator(self):
         return self.comm
 
     def get_rank(self):
-
         return self.rank
 
-    def sync(self):
-
-        self.comm.barrier()
-
-    def broadcast(self, data):
-
-        return self.comm.bcast(data, root = 0)
-
-    def set_all_dones(self):
-
-        self.done = self.comm.bcast(self.done, root = 0)
-
+    # method to make only one single process execute a given function
+    # currently this method does not guarantee that the first process executing this
+    # is rank 0
     def perform_single_operation(self, fun):
-
         if not self.done:
             self.sync()
             ret_value = ""
@@ -60,8 +72,10 @@ class JOB_DISTRIBUTOR:
             print ("Reached here. Return value is: ", ret_value)
             return ret_value
 
+    # method to perform MPI based job distribution across multiple processes
+    # this is the same code from https://graylab.jhu.edu/Sergey/PyRosetta/000/rosetta/#rosetta.PyJobDistributor
+    # and modified a little
     def MPIJobDistributor(self, njobs, fun):
-
         print ("No. of jobs received: ", njobs )
 
         myjobs = []
@@ -91,9 +105,9 @@ class JOB_DISTRIBUTOR:
             if j is not None:
                 fun(j)
 
-
+    # method to perform simple job distribution
+    # divide the runs into each core equally
     def SimpleMPIJobDistributor(self, njobs, fun):
-
         print ("No. of jobs received: ", njobs )
         print ("I am in rank: ", self.rank )
         for i in range(njobs):
