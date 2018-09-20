@@ -47,7 +47,7 @@ class MOVEMAP:
     # constructor
     def __init__(self, pdb_file, pep_start_index, pep_length, groove_distance, filename):
         self.structure = MyPDB(pdb_file)
-        self.structure.read_chain_A() # TODO: Check if this works well for TCR and chaperone examples
+        self.structure.read_chain_A() # This should work since movemap is created after threading is done which creates only a single chain A
         self.pep_start_index = pep_start_index
         self.groove_distance = groove_distance
         self.filename = filename

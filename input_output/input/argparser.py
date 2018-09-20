@@ -43,16 +43,16 @@ class ARGPARSE:
         parser.add_argument("-relax_after_threading", help="idealize and relax template structure before threading", action='store_true')
         parser.add_argument("-mhc_chain", help="provide mhc chain id in the template")
         parser.add_argument("-peptide_chain", help="provide peptide chain id in the template")
-        parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, required=True)
+        parser.add_argument("-pep_start_index", help="provide peptide start index", type=int, default=0)
         parser.add_argument("-groove_distance", help="provide distance to select nearest groove residues from the peptide", type=float, default=3.5)
-        parser.add_argument("-interface_cutpoint", help="last residue index that separates the interfaces for which you are calculating binding energies", type=int, required=True)
+        parser.add_argument("-interface_cutpoint", help="last residue index that separates the interfaces for which you are calculating binding energies", type=int, default=0)
         parser.add_argument("-out_file", help="output file name in csv format to write the binding energies", default="binding_energies.csv")
         parser.add_argument("-nstruct", help="number of times a threaded structure should be relaxed", type=int, default=1)
 
         self.args = parser.parse_args()
 
     # method to validate user specified input
-    # TODO: A more extensive check is required
+    # check if a more extensive check is required
     def check_user_input(self):
         if self.is_list_mhcs() == False:
             if self.get_mhcs() == None or self.get_template_pdb() == None or self.get_peptides() == None:

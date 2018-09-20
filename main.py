@@ -6,7 +6,6 @@
 #   Email: snerli@ucsc.edu
 #
 
-
 # Load the Rosetta commands for use in the Python shell
 from pyrosetta import *
 
@@ -21,11 +20,18 @@ import os
 import sys
 import subprocess
 
+'''
+
+Main is the entry point of RosettaMHC
+
+'''
+
+# method to run the RosettaMHC protocol
 def run():
     args = ARGPARSE()
 
     if args.is_list_mhcs() == True:
-        if args.is_no_trim_mhc_flag_set():
+        if not args.is_no_trim_mhc_flag_set():
             for key,value in hla_sequences.items():
                 print(key)
         else:

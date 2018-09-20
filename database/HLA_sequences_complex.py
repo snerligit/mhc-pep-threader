@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
 #       Sgourakis Lab
-#   Author: Santrupti Nerli
-#   Edited by: Andrew C. McShan
+#   Author: Andrew C. McShan
+#   Edited by: Santrupti Nerli
 #   Date: December 20, 2018
 #   Email: snerli@ucsc.edu
 #
