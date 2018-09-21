@@ -12,17 +12,28 @@
 from Bio.PDB import *
 #
 
+'''
+
+MyPDB class contains all the necessary functionalities required to
+return the pdb( or required chain) given the filename.
+
+'''
+
 class MyPDB:
 
-    pdb = None
-    filename = ""
+    # class members
+    pdb = None # store the pdb read from PDB parser
+    filename = "" # pdb filename
 
+    # constructor
     def __init__(self, filename):
         self.filename = filename
 
+    # getter method
     def get_pdb(self):
         return self.pdb
 
+    # read only chain A of the input pdb
     def read_chain_A(self):
         parser = PDBParser()
         structure = parser.get_structure(self.filename, self.filename)
