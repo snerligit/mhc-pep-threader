@@ -1,0 +1,1 @@
+python3 ../main.py -template_pdb 5ivx_idealized-relaxed.pdb -mhcs mhc_list -beta2m beta2m_list -peptides pep_list -tcr tcr_list -mhc_chain A -peptide_chain P -pep_start_index 376 -interface_cutpoint 375 -no_trim_mhc -relax_after_threading -nstruct 1 -out_file Example1_output.csv
