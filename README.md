@@ -33,15 +33,15 @@ Chaperone - 2 full-length sequences.
 ### Software requirements
 This protocol requires the following libraries/binaries:
 
-    * Python3.x - Python3 is available for download [here](https://www.python.org/downloads/). Detailed instructions to install python for Linux and MacOS machines are available at [Guide for Linux machines](https://docs.python-guide.org/starting/install3/linux/) and [Guide for MacOS machines](https://docs.python-guide.org/starting/install3/osx/).
+* Python3.x - Python3 is available for download [here](https://www.python.org/downloads/). Detailed instructions to install python for Linux and MacOS machines are available at [Guide for Linux machines](https://docs.python-guide.org/starting/install3/linux/) and [Guide for MacOS machines](https://docs.python-guide.org/starting/install3/osx/).
 
-    * [PyRosetta4](http://www.pyrosetta.org/dow)
+* [PyRosetta4](http://www.pyrosetta.org/dow)
 
-    * [Biopython](https://biopython.org/wiki/Download)
+* [Biopython](https://biopython.org/wiki/Download)
 
-    * Clustal omega (command line interface), which is available for download [here](http://www.clustal.org/omega/).
+* Clustal omega (command line interface), which is available for download [here](http://www.clustal.org/omega/).
 
-    * [Rosetta](https://www.rosettacommons.org/software) (optional)
+* [Rosetta](https://www.rosettacommons.org/software) (optional)
 
 ### Input Files
 
@@ -59,8 +59,57 @@ This protocol requires the following libraries/binaries:
 
 ### Output Files
 
+* Cleaned template PDB file. Subsequently, if a template is idealized and relaxed in the pipeline, the idealized and refined structure is also produced.
+
+* Clustal omega input fasta file and corresponding alignment file.
+
+* Target sequence fasta file.
+
+* Rosetta format alignment file (grishin).
+
+* [Movemap](https://www.rosettacommons.org/docs/latest/rosetta_basics/file_types/movemap-file) file .
+
+* Corresponding threaded PDB and refined files.
+
+* A csv file containing binding affinity measure (as per Rosetta energy function).
 
 ## Basic options
+
+    * -list_mhcs : Lists all the MHCs for which sequences are available in the database.
+
+    * -template_pdb : Provide template structure in PDB to perform threading.
+
+    * -mhcs : Provide the list of names of MHCs in the file, if you want to include all, just type "all" in the file.
+
+    * -beta2m :Provide the file containing names of beta2m, Choices include: [humanbeta2m, mousebeta2m, chickenbeta2m, bovinebeta2m, ratbeta2m, none].
+
+    * -peptides : Provide fasta file with peptide sequences that need to be threaded.
+
+    * -tcr : Provide the file containing tcr sequence in fasta format.
+
+    * -chaperone : Provide the file containing names of chaperones, Choices include: [tapasin, tapbpr, none].
+
+    * -mhc_trim_length : Provide the number of residue from which the mhc should be trimmed, default value=181)
+
+    * -no_trim_mhc : Should we model the whole complex.
+
+    * -idealize_relax : idealize and relax template structure before threading.
+
+    * -relax_after_threading : idealize and relax template structure before threading.
+
+    * -mhc_chain : Provide mhc chain id in the template.
+
+    * -peptide_chain : Provide peptide chain id in the template.
+
+    * -pep_start_index : Provide peptide start index.
+
+    * -groove_distance : Provide distance to select nearest groove residues from the peptide, default value=3.5 Å
+
+    * -interface_cutpoint : Last residue index that separates the interfaces for which you are calculating binding energies, default value = 0.
+
+    * -out_file : Output file name in csv format to write the binding energies", default name="binding_energies.csv".
+
+    * -nstruct : number of times a threaded structure should be relaxed", type=int, default value=1.
 
 ## Examples
 
@@ -68,6 +117,12 @@ Below are the examples that showcase how RosettaMHC can be utilized to understan
 
 ### Modeling MHC-peptide complexes
 
+Example scripts used to model and extract binding energies of peptides to MHCs can be found under examples/example-thread-peptide.
+
 ### Modeling MHC-peptide-TCR complexes
 
+Example scripts used to model and extract binding energies of peptides-MHCs to TCR molecules can be found under examples/example-thread-tcr.
+
 ### Modeling MHC-Chaperone complexes
+
+Example scripts used to model and extract binding energies of MHCs to chaperone molecules can be found under examples/example-thread-chaperone.
