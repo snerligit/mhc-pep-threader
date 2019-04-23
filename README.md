@@ -6,6 +6,17 @@
 
 ## Introduction
 
+RosettaMHC is an automated structure-based method used to study peptide/MHC-I biomolecular systems in a high-throughput manner. We can use this method to
+
+* Model peptide/MHC-I structures and predict peptides that bind to MHC-I molecules,
+* Identify altered peptide ligands, and
+* Filter molecular chaperones that load or edit peptides in the MHC-I molecules.
+
+RosettaMHC uses homology modeling and energy minimization to predict structures of peptide/MHC-I/(chaperone or TCR) molecules. From the modeled complexes, interface analyses is carried out which reports on the affinities between (i) peptide and MHC-I, (ii) peptide/MHC-I and TCR, or (iii) peptide/MHC-I and chaperone. To run this method, a user has to provide X-ray antigen/MHC-I/(chaperone or TCR) (or template) structure alongside a list of names of MHC-I molecules, antigen and chaperone (or TCR) sequences (See Input files section below). RosettaMHC automatically prepares the template, aligns template and target sequences, performs homology modeling and energy minimization, and predicts binding affinities (See Algorithm section below). RosettaMHC is implemented using PyRosetta software libraries and supports MPI-based parallelization.
+
+We carried out benchmark calculations using RosettaMHC and found that (i) the models of complexes are typically within 2 Å from the reference structures (tested using X-ray structures in the PDB) (See Reference) and (ii) predicted non-self-antigen with HLA-A*01 (a sub-group of MHC-I) model was very close to the solved X-ray structure (See Reference).
+
+Limitation: This method works when the sequences of antigens in both template and target are of same length.
 
 ## Algorithm
 
@@ -117,12 +128,12 @@ Below are the examples that showcase how RosettaMHC can be utilized to understan
 
 ### Modeling MHC-peptide complexes
 
-Example scripts used to model and extract binding energies of peptides to MHCs can be found under examples/example-thread-peptide.
+Example scripts in run.sh or mpi_run.sh used to model and extract binding energies of peptides to MHCs can be found under examples/example-thread-peptide.
 
 ### Modeling MHC-peptide-TCR complexes
 
-Example scripts used to model and extract binding energies of peptides-MHCs to TCR molecules can be found under examples/example-thread-tcr.
+Example scripts in run.sh or mpi_run.sh used to model and extract binding energies of peptides-MHCs to TCR molecules can be found under examples/example-thread-tcr.
 
 ### Modeling MHC-Chaperone complexes
 
-Example scripts used to model and extract binding energies of MHCs to chaperone molecules can be found under examples/example-thread-chaperone.
+Example scripts in run.sh or mpi_run.sh used to model and extract binding energies of MHCs to chaperone molecules can be found under examples/example-thread-chaperone.
