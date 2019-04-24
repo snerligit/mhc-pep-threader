@@ -2,6 +2,8 @@
 
 ## References
 
+* "RosettaMHC; Structure-based modeling of neoantigen/HLA complexes” Nerli et al., manuscript in preparation
+
 * Toor JS, Rao AA, McShan AC, Yarmarkovich M, Nerli S, Yamaguchi K, Madejska AA, Nguyen S, Tripathi S, Maris JM, Salama SR, Haussler D and Sgourakis NG (2018) A Recurrent Mutation in Anaplastic Lymphoma Kinase with Distinct Neoepitope Conformations. Front. Immunol. 9:99. doi: 10.3389/fimmu.2018.00099
 
 ## Introduction
