@@ -48,6 +48,7 @@ class ARGPARSE:
         parser.add_argument("-interface_cutpoint", help="last residue index that separates the interfaces for which you are calculating binding energies", type=int, default=0)
         parser.add_argument("-out_file", help="output file name in csv format to write the binding energies", default="binding_energies.csv")
         parser.add_argument("-nstruct", help="number of times a threaded structure should be relaxed", type=int, default=1)
+        parser.add_argument("-clustal_path", help="Path to clustal omega", default='clustalo')
 
         self.args = parser.parse_args()
 
@@ -118,3 +119,6 @@ class ARGPARSE:
 
     def get_out_file(self):
         return self.args.out_file
+
+    def get_clustal_path(self):
+        return self.args.clustal_path

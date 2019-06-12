@@ -14,7 +14,7 @@ alignment between the template and the target sequences.
 '''
 
 # additional bio libraries
-# Refernce: Fast, scalable generation of high-quality protein multiple sequence alignments using Clustal Omega. 
+# Refernce: Fast, scalable generation of high-quality protein multiple sequence alignments using Clustal Omega.
 # (2011 October 11) Molecular systems biology 7 :539
 from Bio.Align.Applications import ClustalOmegaCommandline
 
@@ -34,6 +34,7 @@ class ALIGN:
     matrix_type = 62 # matrix type to use for scoring alignment
     clustal_input = "" # input filename for clustal omega
     clustal_output = "" # output filename for clustal omega
+    clustal_path = 'clustalo'
 
     # constructor
     def __init__(self, template_seq, target_seq, matrix_type = 62):
@@ -42,6 +43,7 @@ class ALIGN:
         self.target_seq = target_seq
         self.clustal_input = "clustal_default_input.fasta"
         self.clustal_output = self.clustal_input+"_clustal_output.fasta"
+        self.clustal_path = clustal_path
 
     # method to create clustal input file
     def init_clustal_input(self):
@@ -57,7 +59,7 @@ class ALIGN:
     # clustal output file
     def clustal(self):
         self.init_clustal_input()
-        cline = ClustalOmegaCommandline(infile=self.clustal_input, outfile=self.clustal_output, distmat_full=True,
+        cline = ClustalOmegaCommandline(cmd=self.clustal_path, infile=self.clustal_input, outfile=self.clustal_output, distmat_full=True,
                                         verbose=True, seqtype="Protein", outfmt="vienna", iterations=10, percentid=True, force=True)
         cline()
 
