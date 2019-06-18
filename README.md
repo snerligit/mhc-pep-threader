@@ -52,7 +52,7 @@ This protocol requires the following libraries/binaries:
 
 * [Biopython](https://biopython.org/wiki/Download)
 
-* Clustal omega (command line interface), which is available for download [here](http://www.clustal.org/omega/).
+* Clustal omega (command line interface), which is available for download [here](http://www.clustal.org/omega/). The binary as per the operating system must be downloaded and renamed to clustalo. The PATH for clustalo has to be added to bashrc or pash_profile by using export PATH="<Path to clsutalo>":$PATH. 
 
 * [Rosetta](https://www.rosettacommons.org/software) (optional)
 
