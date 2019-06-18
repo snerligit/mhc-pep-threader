@@ -60,11 +60,15 @@ class MODEL:
             if ( self.args.get_interface_cupoint() == 0 ):
                 print ("Please provide interface cutpoint. Option: -interface_cutpoint")
                 exit(1)
-        elif ( len(peptides.get_headers()) == 1 ):
+        '''
+            # Not sure why I introduced this. Keeping it commented until I figure out that case
+
+            elif ( len(peptides.get_headers()) == 1 ):
             for pep_header in peptides.get_headers():
                 if ( pep_header is not "none" ):
                     print ("Please provide peptide start index. Option: -pep_start_index")
                     exit(1)
+        '''
 
         # get all combinations of sequences
         # mhcs, beta2ms, peptides, tcrs and chaperones
