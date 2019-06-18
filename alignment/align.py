@@ -30,6 +30,7 @@ class ALIGN:
 
     # class members
     template_seq = None # amino acid sequence for a given template
+    target_header = None
     target_seq = None # amino acid sequence for the required target
     matrix_type = 62 # matrix type to use for scoring alignment
     clustal_input = "" # input filename for clustal omega
@@ -37,12 +38,12 @@ class ALIGN:
     clustal_path = 'clustalo'
 
     # constructor
-    def __init__(self, template_seq, target_seq, clustal_path, matrix_type = 62):
+    def __init__(self, template_seq, target_header, target_seq, clustal_path, matrix_type = 62):
         self.template_seq = template_seq
         self.matrix_type = matrix_type
         self.target_seq = target_seq
-        self.clustal_input = "clustal_default_input.fasta"
-        self.clustal_output = self.clustal_input+"_clustal_output.fasta"
+        self.clustal_input = target_header+"_clustal_input.fasta"
+        self.clustal_output = target_header+"_clustal_output.fasta"
         self.clustal_path = clustal_path
 
     # method to create clustal input file

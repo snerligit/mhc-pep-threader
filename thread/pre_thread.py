@@ -106,7 +106,7 @@ class PRE_THREADING:
     # method to align template and target sequences using clustal
     def align_template_target_sequences(self):
         key = self.complex_header.split("_")[0]
-        self.alignment = ALIGN(self.template.get_sequence(), self.complex_sequence, self.args.get_clustal_path())
+        self.alignment = ALIGN(self.template.get_sequence(), self.complex_header, self.complex_sequence, self.args.get_clustal_path())
         self.alignment.clustal()
         alignment = FASTA(self.alignment.get_clustal_output_filename())
         alignment.read()
