@@ -37,7 +37,7 @@ class ALIGN:
     clustal_path = 'clustalo'
 
     # constructor
-    def __init__(self, template_seq, target_seq, matrix_type = 62):
+    def __init__(self, template_seq, target_seq, clustal_path, matrix_type = 62):
         self.template_seq = template_seq
         self.matrix_type = matrix_type
         self.target_seq = target_seq
