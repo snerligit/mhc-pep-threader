@@ -39,7 +39,7 @@ def run():
                 print(key)
     else:
         # Load Rosetta database files
-        init()
+        init(options='')
         modeller = MODEL(args)
         modeller.model_mhc_for_each_peptide_beta2m_tcr_chaperone()
 

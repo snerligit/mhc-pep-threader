@@ -90,10 +90,11 @@ class POST_THREADING:
         relaxed_threaded_pose = relax.relax_pdb_with_movemap(threaded_pose, self.movemap.get_movemap())
         relaxed_threaded_pose.dump_pdb(self.tag+"_relaxed_"+str(i)+".pdb")
 
+        freshly_relaxed_pose = pose_from_pdb(self.tag+"_relaxed_"+str(i)+".pdb")
         # split the chains of the relaxed structures
         # according to the cutpoint because threader
         # create a singe chain
-        chain_split = CHAIN_SPLIT(relaxed_threaded_pose, self.args.get_interface_cupoint())
+        chain_split = CHAIN_SPLIT(freshly_relaxed_pose, self.args.get_interface_cupoint())
         chain_split.cut()
         split_pose = Pose()
         split_pose = chain_split.get_pose()
