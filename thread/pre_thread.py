@@ -15,11 +15,13 @@ from pyrosetta.rosetta.core.scoring import *
 from pyrosetta.rosetta.core.sequence import *
 
 #custom libraries
-from idealize_relax.relax import RELAX
+#from idealize_relax.relax import RELAX
 from thread.template import TEMPLATE
 from thread.fasta import FASTA
 from alignment.align import ALIGN
 from alignment.grishin import GRISHIN
+
+from idealize_relax.backrub import BACKRUB
 
 # import other required libraries
 import os

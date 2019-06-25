@@ -3,11 +3,11 @@
 #       Sgourakis Lab
 #   Author: Hailey Wallace
 #   Date: June 19, 2019
-#
+#   Email: hmwalla2@nscu.edu
 
 '''
 
-IDEALIZE class contains all the necessary functionalities required to idealize
+BACKRUB class contains all the necessary functionalities required to backrub
 an input pose.
 
 '''
@@ -27,8 +27,8 @@ class BACKRUB:
         br.apply(pose)
         return pose
 
-    #method to perform simple minimization using Backrub
-    #also minimizes only those residues specifies in the movemap
+    #method to perturb the backbone using Backrub
+    #also perturbs those residues specified in the movemap
 
     def backrub_pdb_with_movemap(self, pose, movemap):
         br = BackrubProtocol()

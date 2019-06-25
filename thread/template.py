@@ -14,7 +14,9 @@ from pyrosetta.toolbox import cleanATOM
 from pyrosetta.rosetta.protocols.relax import *
 from pyrosetta.rosetta.core.scoring import *
 from idealize_relax.idealize import IDEALIZE
-from idealize_relax.relax import RELAX
+#from idealize_relax.relax import RELAX
+
+from idealize_relax.backrub import BACKRUB
 
 # additional bio library
 from Bio.PDB import *
@@ -112,5 +114,6 @@ class TEMPLATE:
         if idealize_relax == True:
             template_pose = self.template_pose
             self.template_pose = IDEALIZE().idealize_pdb(template_pose)
-            self.template_pose = RELAX().relax_pdb(template_pose)
+            self.template_pose = BACKRUB().backrub_pdb(template_pose)
+            #self.template_pose = RELAX().relax_pdb(template_pose)
         self.save_pdb()

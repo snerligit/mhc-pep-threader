@@ -39,7 +39,7 @@ class ARGPARSE:
         parser.add_argument("-chaperone", help="provide the file containing names of chaperones, Choices include: choices=[tapasin, tapbpr, none]")
         parser.add_argument("-mhc_trim_length", help="provide the number of residue from which the mhc should be trimmed", type=int, default=181)
         parser.add_argument("-no_trim_mhc", help="Should we model the whole complex", action='store_false')
-        parser.add_argument("-idealize_relax", help="idealize and relax template structure before threading", action='store_true')
+      #  parser.add_argument("-idealize_relax", help="idealize and relax template structure before threading", action='store_true')
         parser.add_argument("-relax_after_threading", help="idealize and relax template structure before threading", action='store_true')
         parser.add_argument("-mhc_chain", help="provide mhc chain id in the template")
         parser.add_argument("-peptide_chain", help="provide peptide chain id in the template")
@@ -49,6 +49,7 @@ class ARGPARSE:
         parser.add_argument("-out_file", help="output file name in csv format to write the binding energies", default="binding_energies.csv")
         parser.add_argument("-nstruct", help="number of times a threaded structure should be relaxed", type=int, default=1)
         parser.add_argument("-clustal_path", help="Path to clustal omega", default='clustalo')
+        parser.add_argument("-idealize_backrub", help="implements flexibility respect to backbone", action='store_true')
 
         self.args = parser.parse_args()
 
@@ -122,3 +123,6 @@ class ARGPARSE:
 
     def get_clustal_path(self):
         return self.args.clustal_path
+
+    def get_idealize_backrub(self):
+        return self.args.idealize_backrub

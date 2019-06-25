@@ -124,7 +124,7 @@ class MODEL:
                                             self.args.get_peptide_chain(),
                                             self.args.is_no_trim_mhc_flag_set(),
                                             self.args.get_mhc_trim_length(),
-                                            self.args.get_idealize_relax())
+                                            self.args.get_idealize_backrub())
         return self.template.get_pdb()
 
     # method to generate fasta file names

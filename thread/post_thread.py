@@ -1,20 +1,23 @@
 #!/usr/bin/python
 
 #       Sgourakis Lab
-#   Author: Santrupti Nerli
-#   Date: May 25, 2017
-#   Email: snerli@ucsc.edu
+#   Author: Hailey Wallace
+#   Date: June 21, 2019
+#   Email: hmwalla2@ncsu.edu
+#   Edits to allow for backbone perturbations before FastRelax
 #
 
 # Load the Rosetta commands for use in the Python shell
 from pyrosetta import *
 
 #custom libraries
-from idealize_relax.relax import RELAX
 from idealize_relax.movemap import MOVEMAP
 from ia.chain_split import CHAIN_SPLIT
 from ia.interface_analyzer import INTERFACE
 from input_output.output.output_interface_energies import OUT_INTERFACE_ENERGY
+
+from idealize_relax.backrub import BACKRUB
+from idealize_relax.relax import RELAX
 
 # import other required libraries
 import os
@@ -78,14 +81,22 @@ class POST_THREADING:
                     self.minimize_and_calculate_energy(job_id)
             self.output_energies.write()
 
-    # method to perform ebergy minimization and calculate
+    #method to perturb backbone
+    def backbone_mover(self, i):
+        backrub = BACKRUB()
+        threaded_pose = Pose()
+        threaded_pose.detached_copy(self.threaded_pose)
+
+
+    # method to perform energy minimization and calculate
     # interface energies
     def minimize_and_calculate_energy(self, i):
         relax = RELAX()
         threaded_pose = Pose()
         threaded_pose.detached_copy(self.threaded_pose)
 
-        # output relaxed structures
+
+        # output minimized structures
         relaxed_threaded_pose = Pose()
         relaxed_threaded_pose = relax.relax_pdb_with_movemap(threaded_pose, self.movemap.get_movemap())
         relaxed_threaded_pose.dump_pdb(self.tag+"_relaxed_"+str(i)+".pdb")
