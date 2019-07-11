@@ -15,6 +15,7 @@ from idealize_relax.movemap import MOVEMAP
 from ia.chain_split import CHAIN_SPLIT
 from ia.interface_analyzer import INTERFACE
 from input_output.output.output_interface_energies import OUT_INTERFACE_ENERGY
+from scoring.rmsd import RMSD
 
 # import other required libraries
 import os
@@ -88,9 +89,18 @@ class POST_THREADING:
         # output relaxed structures
         relaxed_threaded_pose = Pose()
         relaxed_threaded_pose = relax.relax_pdb_with_movemap(threaded_pose, self.movemap.get_movemap())
-        relaxed_threaded_pose.dump_pdb(self.tag+"_relaxed_"+str(i)+".pdb")
+        relaxed_tag = self.tag+"_relaxed_"+str(i)+".pdb"
+        relaxed_threaded_pose.dump_pdb(relaxed_tag)
 
-        freshly_relaxed_pose = pose_from_pdb(self.tag+"_relaxed_"+str(i)+".pdb")
+        # compute rmsd values to the native if provided
+        all_rms = -1
+        ca_rms = -1
+        if self.args.get_native() != None:
+            [all_rms, ca_rms] = self.report_rmsd(relaxed_tag)
+            print("All atom RMSD: ", all_rms)
+            print("CA RMSD: ", ca_rms)
+
+        freshly_relaxed_pose = pose_from_pdb(relaxed_tag)
         # split the chains of the relaxed structures
         # according to the cutpoint because threader
         # create a singe chain
@@ -103,4 +113,17 @@ class POST_THREADING:
         ia = INTERFACE(split_pose)
         ia.analyze()
         print("Interface energy: ", ia.get_dG())
-        self.output_energies.add(self.tag, ia.get_dG())
+        self.output_energies.add(self.tag, ia.get_dG(), all_rms, ca_rms)
+
+    def report_rmsd(self, tag, movemap = None):
+        pose = pose_from_pdb(tag)
+        native_pose = pose_from_pdb(self.args.get_native())
+        rms_obj = RMSD(pose, native_pose)
+
+        all = rms_obj.all_atom_rmsd()
+        if movemap != None:
+            ca = rms_obj.CA_rmsd(movemap)
+        else:
+            ca = rms_obj.CA_rmsd()
+
+        return [all, ca]

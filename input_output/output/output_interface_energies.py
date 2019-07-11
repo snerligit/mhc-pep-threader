@@ -28,9 +28,16 @@ class OUT_INTERFACE_ENERGY:
         self.filename =  filename
 
     # method to populate dictionary with binding energies
-    def add(self, key, value):
+    def add(self, key, value, rms1 = -1, rms2 = -1):
         fields = key.split("_")[:4]
-        self.energies[key].append(value)
+        if rms1 == -1 and rms2 == -1:
+            self.energies[key].append(value)
+        else:
+            metrics = []
+            metrics.append(value)
+            metrics.append(rms1)
+            metrics.append(rms2)
+            self.energies[key].append(metrics)
 
     # method to output a csv file containing names of domains
     # and their corresponding binding energies

@@ -49,6 +49,7 @@ class ARGPARSE:
         parser.add_argument("-out_file", help="output file name in csv format to write the binding energies", default="binding_energies.csv")
         parser.add_argument("-nstruct", help="number of times a threaded structure should be relaxed", type=int, default=1)
         parser.add_argument("-clustal_path", help="Path to clustal omega", default='clustalo')
+        parser.add_argument("-native", help="native pdb file to compare and report RMSD values", default=None)
 
         self.args = parser.parse_args()
 
@@ -122,3 +123,6 @@ class ARGPARSE:
 
     def get_clustal_path(self):
         return self.args.clustal_path
+
+    def get_native(self):
+        return self.args.native

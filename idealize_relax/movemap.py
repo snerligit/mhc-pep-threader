@@ -107,3 +107,14 @@ class MOVEMAP:
         movemap_object = MoveMap()
         movemap_object.init_from_file(self.filename)
         return movemap_object
+
+    def extract_residues_from_movemap(movemap):
+        readfilehandler = open(movemap, "r")
+        resi_list = pyrosetta.rosetta.std.list_unsigned_long_t()
+        for line in readfilehandler:
+            line = line.rstrip()
+            if "RESIDUE" in line and "CHI" in line:
+                resi = line.split(" ")[1]
+                resi_list.append(int(resi))
+        readfilehandler.close()
+        return resi_list

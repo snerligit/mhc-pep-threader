@@ -24,7 +24,7 @@ if __name__ == "__main__":
     parser.add_argument("-pattern", help="provide a pattern", default="low")
     parser.add_argument("-pep_start_index", help="provide peptide start index", type=int)
     parser.add_argument("-pep_length", help="provide peptide length", type=int)
-    parser.add_argument("-groove_distance", help="provide groove distance", default=3.5)
+    parser.add_argument("-groove_distance", help="provide groove distance", type=float, default=3.5)
     args = parser.parse_args()
 
     init()
