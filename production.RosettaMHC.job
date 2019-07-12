@@ -1,0 +1,51 @@
+#
+#
+# JOB TEMPLATE FOR BAKER CLUSTER
+#
+# Your job name
+#$ -N RosettaMHCJob
+#
+# User current working directory
+#$ -cwd
+#
+# Don’t combine input and output
+#$ -j y
+#
+# Pass your required variables
+#$ -v $PATH,$LD_LIBRARY_PATH
+#
+#NSTRUCT=$( `echo $NSLOTS | awk ‘{print $1-3}’`)
+#echo $NSTRUCT
+NSTRUCT=`echo $NSLOTS | awk '{print $1-3}'`
+PATH=$PATH:/home/snerli/test_rmhc/mhc-pep-threader/
+LOGS=logs_`echo $PBS_JOBID | awk -v FS="." '{print $1}'`
+mkdir -p $LOGS
+
+#
+echo ""
+echo $PATH
+echo $LD_LIBRARY_PATH
+echo $TMPDIR
+export PATH="/home/snerli/anaconda3/bin:$PATH"
+export PATH="/home/snerli/alignment/clustalo:$PATH"
+echo ""
+echo "Executing on : $HOSTNAME"
+echo "Number of hosts operating on : $NHOSTS"
+echo "Number of queued slots in use for parallel job: $NSLOTS"
+# where $NSLOTS is as submitted to pe command to the OpenGrid SGE scheduler
+echo ""
+echo "Running on $NSLOTS cpus …"
+#
+# Workaround for bash patch (Shellshock?) incompatibilities regarding exported functions
+unset module
+#
+#Current Rosetta binaries
+EXE=/home/snerli/test_rmhc/mhc-pep-threader/compute_rmsd_ia.py
+CMDLINE="-pdb $1 -movemap $2 -native $3 -cutpoint $4 -outfile rmsds_vs_energies.csv"
+echo $EXE
+echo $CMDLINE
+
+mpiexec -n $NSLOTS $EXE $CMDLINE
+
+
+exit

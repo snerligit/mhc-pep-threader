@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='compute rmsd values')
     parser.add_argument("-dir", help="provide directory containing pdb files")
-    parser.add_argument("-native", help="provide cutpoint")
+    parser.add_argument("-native", help="provide native pdb file")
     parser.add_argument("-pattern", help="provide pattern to look for in the target file name")
     parser.add_argument("-movemap", help="find rmsd value for the residues used in the movemap")
     parser.add_argument("-choice", help="which type of rmsd do you want to calculate", choices=['all','CA','CA_with_start_and_end','CA_with_movemap'])
